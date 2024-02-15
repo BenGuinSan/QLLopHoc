@@ -119,7 +119,27 @@
     <Compile Include="Comparer\TaiKhoanComparer.cs" />
     <Compile Include="DAO\TaiKhoan\TaiKhoanDAO.cs" />
     <Compile Include="database\DatabaseConnect.cs" />
+    <Compile Include="DTO\BaiLamBaiTap.cs" />
+    <Compile Include="DTO\BaiLamKiemTra.cs" />
+    <Compile Include="DTO\BaiTap.cs" />
+    <Compile Include="DTO\BanBe.cs" />
+    <Compile Include="DTO\CauHoi.cs" />
+    <Compile Include="DTO\CauTraLoi.cs" />
+    <Compile Include="DTO\ChiTietBaiLamKiemTra.cs" />
+    <Compile Include="DTO\ChiTietDeKiemTra.cs" />
+    <Compile Include="DTO\Chuong.cs" />
+    <Compile Include="DTO\DeKiemTra.cs" />
+    <Compile Include="DTO\FileBaiLamBaiTap.cs" />
+    <Compile Include="DTO\FileBaiTap.cs" />
+    <Compile Include="DTO\FileHocLieu.cs" />
+    <Compile Include="DTO\HocLieu.cs" />
+    <Compile Include="DTO\LopHoc.cs" />
+    <Compile Include="DTO\NhomChat.cs" />
+    <Compile Include="DTO\NhomQuyen.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="DTO\ThamGia.cs" />
+    <Compile Include="DTO\TinNhanBanBe.cs" />
+    <Compile Include="DTO\TinNhanNhomChat.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +160,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DangNhap\Signinfrm.resx">
+      <DependentUpon>Signinfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,6 +171,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -163,6 +187,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="icon\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\eyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\imagelg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

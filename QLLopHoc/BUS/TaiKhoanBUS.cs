@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLLopHoc.BUS
 {
-    internal class TaiKhoanBUS
+    public class TaiKhoanBUS
     {
     }
 }
