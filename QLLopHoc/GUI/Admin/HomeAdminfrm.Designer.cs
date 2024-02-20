@@ -1,6 +1,6 @@
-﻿namespace QLLopHoc
+﻿namespace QLLopHoc.GUI.Admin
 {
-    partial class Form1
+    partial class HomeAdminfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,20 +34,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(278, 135);
+            this.label1.Location = new System.Drawing.Point(383, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Day la user";
+            this.label1.Text = "Day la admin";
             // 
-            // Form1
+            // HomeAdminfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "HomeAdminfrm";
+            this.Text = "HomeAdminfrm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,4 +58,3 @@
         private System.Windows.Forms.Label label1;
     }
 }
-

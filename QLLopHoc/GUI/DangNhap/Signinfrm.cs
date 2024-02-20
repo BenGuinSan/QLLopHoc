@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
+using QLLopHoc.BUS;
+using QLLopHoc.DAO;
+using QLLopHoc.DTO;
+using QLLopHoc.GUI.Admin;
 
 namespace QLLopHoc.GUI.DangNhap
 {
     public partial class Signinfrm : Form
     {
+        TaiKhoanDAO taikhoanDAO = new TaiKhoanDAO();
+        TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
         public Signinfrm()
         {
             InitializeComponent();
@@ -77,12 +84,58 @@ namespace QLLopHoc.GUI.DangNhap
 
         private void btn_dangnhap_Click(object sender, EventArgs e)
         {
-
+            string email = txt_email.Text;
+            string password = txt_matkhau.Text;
+            if(email.Length == 0 || password.Length == 0)
+            {
+                MessageBox.Show("Email hoặc mật khẩu không được để trống", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (taiKhoanBUS.kt_email(email))
+                {
+                    if (taiKhoanBUS.kt_taikhoan_tontai(email))
+                    {
+                        if (taiKhoanBUS.kt_daxoa_taikhoan(email) == 0)
+                        {
+                            if(taikhoanDAO.check_taikhoan(email, password))
+                            {
+                                if (taiKhoanBUS.kt_quyenhan_taikhoan(email) == 1)
+                                {
+                                    this.Hide();
+                                    HomeAdminfrm homefrm = new HomeAdminfrm();
+                                    homefrm.ShowDialog();
+                                } else
+                                {
+                                    TaiKhoan tk1 = taiKhoanBUS.GetTaiKhoanByEmail(email);
+                                    this.Hide();
+                                    Form1 mainfr = new Form1();
+                                    mainfr.Show();
+                                }
+                            } else
+                            {
+                                MessageBox.Show("Sai mật khẩu", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }   
+                        } else
+                        {
+                            MessageBox.Show("Email đã bị ban khỏi phần mềm Hybrid do bị quá nhiều report từ các người dùng khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }else
+                    {
+                        MessageBox.Show("Email này chưa được đăng ký trước đó", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }   
+                }else
+                {
+                    MessageBox.Show("Email không hợp lệ hoặc không đúng định dạng cơ bản\nVD:abc@gmail.com", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btn_dangky_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Signupfrm signupfrm = new Signupfrm();
+            signupfrm.ShowDialog();
         }
 
         private void btnQuenMK_Click(object sender, EventArgs e)

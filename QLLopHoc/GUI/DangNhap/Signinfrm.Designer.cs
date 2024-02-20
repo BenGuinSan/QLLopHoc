@@ -63,7 +63,7 @@
             // thanhngang
             // 
             this.thanhngang.BackColor = System.Drawing.Color.Black;
-            this.thanhngang.Location = new System.Drawing.Point(76, 291);
+            this.thanhngang.Location = new System.Drawing.Point(76, 296);
             this.thanhngang.Name = "thanhngang";
             this.thanhngang.Size = new System.Drawing.Size(336, 2);
             this.thanhngang.TabIndex = 6;
@@ -205,7 +205,6 @@
             this.Controls.Add(this.btnQuenMK);
             this.Controls.Add(this.btn_dangky);
             this.Controls.Add(this.btn_dangnhap);
-            this.Controls.Add(this.btnShowMK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_matkhau);
             this.Controls.Add(this.pictureBox2);
@@ -213,6 +212,7 @@
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnShowMK);
             this.Controls.Add(this.btnHideMK);
             this.Name = "Signinfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
