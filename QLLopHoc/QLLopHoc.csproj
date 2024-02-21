@@ -166,6 +166,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RJControls\RJCircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +219,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="image\imagelg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\home_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\to-do-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\friends.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\main-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\class.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
