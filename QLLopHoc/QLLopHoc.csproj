@@ -146,6 +146,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\Accountfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Accountfrm.Designer.cs">
+      <DependentUpon>Accountfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Classfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Classfrm.Designer.cs">
+      <DependentUpon>Classfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\HomeAdminfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,18 @@
     <Compile Include="GUI\DangNhap\Signupfrm.Designer.cs">
       <DependentUpon>Signupfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Home\Homefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\Homefrm.Designer.cs">
+      <DependentUpon>Homefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Todo\Todofrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Todo\Todofrm.Designer.cs">
+      <DependentUpon>Todofrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RJControls\RJCircularPictureBox.cs">
@@ -171,6 +195,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Accountfrm.resx">
+      <DependentUpon>Accountfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Classfrm.resx">
+      <DependentUpon>Classfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\HomeAdminfrm.resx">
       <DependentUpon>HomeAdminfrm.cs</DependentUpon>
@@ -180,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhap\Signupfrm.resx">
       <DependentUpon>Signupfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\Homefrm.resx">
+      <DependentUpon>Homefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Todo\Todofrm.resx">
+      <DependentUpon>Todofrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -240,6 +276,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon\class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\minus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
