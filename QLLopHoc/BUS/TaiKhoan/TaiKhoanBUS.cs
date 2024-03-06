@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using QLLopHoc.DAO;
 using QLLopHoc.DTO;
 
@@ -12,16 +14,16 @@ namespace QLLopHoc.BUS
 {
     public class TaiKhoanBUS
     {
-        private List<TaiKhoan> list = new List<TaiKhoan>();
+        private List<TaiKhoanDTO> list = new List<TaiKhoanDTO>();
         public TaiKhoanDAO dao = new TaiKhoanDAO();
-        public List<TaiKhoan> List { get => list; set => list = value; }
+
 
         // Gán mảng kiểu TaiKhoan được lấy lên ở DAO truyền vào 'list' ở lớp BUS
         public TaiKhoanBUS()
         {
             list = dao.get_danhSach();
         }
-        public List<TaiKhoan> get_list()
+        public List<TaiKhoanDTO> get_list()
         {
             return list;
         }
@@ -32,7 +34,7 @@ namespace QLLopHoc.BUS
         }
         public Boolean kt_taikhoan_tontai(string email)
         {
-            foreach (TaiKhoan t in list)
+            foreach (TaiKhoanDTO t in list)
             {
                 if (t.Email == email)
                     return true;
@@ -41,7 +43,7 @@ namespace QLLopHoc.BUS
         }
         public int kt_quyenhan_taikhoan(string email)
         {
-            foreach (TaiKhoan t in list)
+            foreach (TaiKhoanDTO t in list)
             {
                 if (t.Email == email)
                     return t.Manhomquyen;
@@ -50,17 +52,17 @@ namespace QLLopHoc.BUS
         }
         public int kt_daxoa_taikhoan(string email)
         {
-            foreach (TaiKhoan t in list)
+            foreach (TaiKhoanDTO t in list)
             {
                 if (t.Email == email)
                     return t.Daxoa;
             }
             return 1;
         }
-        public TaiKhoan GetTaiKhoanByEmail(string email)
+        public TaiKhoanDTO GetTaiKhoanByEmail(string email)
         {
-            TaiKhoan taikhoan = null;
-            foreach (TaiKhoan tk in this.list)
+            TaiKhoanDTO taikhoan = null;
+            foreach (TaiKhoanDTO tk in this.list)
             {
                 if (tk.Email.Equals(email))
                 {
@@ -78,7 +80,7 @@ namespace QLLopHoc.BUS
         public Boolean tao_taikhoan(string email, string password)
         {
             // Lấy email là họ và tên tạm thời
-            TaiKhoan tk = new TaiKhoan(null, email, email, password, null, null, 2, 0);
+            TaiKhoanDTO tk = new TaiKhoanDTO(null, email, email, password, null, null, 2, 0);
             if (dao.insert_taikhoan(tk) == true)
             {
                 list.Add(tk);
@@ -87,6 +89,25 @@ namespace QLLopHoc.BUS
             else { 
                 return false; 
             }
+        }
+
+        public void taiKhoan_GridView(DataGridView dataGridView)
+        {
+            DataTable dt = dao.getDSTaiKhoan();
+            // Gan du lieu do dataGridView
+            dataGridView.DataSource = dt;
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+            checkBoxColumn.DataPropertyName = "daxoa";
+            checkBoxColumn.HeaderText = "Đã Xóa";
+            checkBoxColumn.Name = "daxoa";
+            dataGridView.Columns.Add(checkBoxColumn);
+            dataGridView.Columns[0].HeaderText = "Họ tên";
+            dataGridView.Columns[1].HeaderText = "Email";
+            dataGridView.Columns[2].HeaderText = "Số điện thoại";
+            dataGridView.Columns[0].Width = 300;
+            dataGridView.Columns[1].Width = 300;
+            dataGridView.Columns[2].Width = 280;
+            dataGridView.Columns[3].Visible = false;
         }
     }
 }

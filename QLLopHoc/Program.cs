@@ -18,7 +18,7 @@ namespace QLLopHoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeAdminfrm());
+            Application.Run(new Form1());
         }
     }
 }

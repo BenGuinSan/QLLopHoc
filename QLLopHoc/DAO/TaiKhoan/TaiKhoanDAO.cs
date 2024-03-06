@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -12,9 +13,10 @@ namespace QLLopHoc.DAO
     public class TaiKhoanDAO
     {
         // Khởi tạo 1 mảng kiểu <TaiKhoan> để lưu trữ danh sách tài khoản từ database
-        public List<TaiKhoan> get_danhSach()
+        public List<TaiKhoanDTO> get_danhSach()
         {
-            List<TaiKhoan> danhSachTaiKhoan = new List<TaiKhoan>();
+            List<TaiKhoanDTO> danhSachTaiKhoan = new List<TaiKhoanDTO>();
+   
             using(SqlConnection connection = DatabaseConnect.GetConnection())
             {
                 string sqlQuery = "SELECT mataikhoan, hoten, email, matkhau, sodienthoai, anhdaidien, manhomquyen,daxoa FROM dbo.taikhoan";
@@ -24,7 +26,7 @@ namespace QLLopHoc.DAO
                     {
                         while(reader.Read())
                         {
-                            TaiKhoan taikhoan = new TaiKhoan
+                            TaiKhoanDTO taikhoan = new TaiKhoanDTO
                             {
                                 Mataikhoan = reader["mataikhoan"].ToString(),
                                 Hoten = reader["hoten"].ToString(),
@@ -55,9 +57,13 @@ namespace QLLopHoc.DAO
                     {
                         if (reader.Read())
                         {
+                            int salt = 12;
                             var storedPasswordHash = (string)reader["matkhau"];
-                 
-                            return BCrypt.Net.BCrypt.Verify(password, storedPasswordHash);
+                            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password, salt);
+
+
+                            // Check if the provided password matches the stored hash
+                            return BCrypt.Net.BCrypt.Verify(password, passwordHash);
                         }
                         else
                             return false;
@@ -67,7 +73,7 @@ namespace QLLopHoc.DAO
             }
         }
 
-        public Boolean insert_taikhoan(TaiKhoan tk)
+        public Boolean insert_taikhoan(TaiKhoanDTO tk)
         {
             using(SqlConnection connection = DatabaseConnect.GetConnection())
             {
@@ -99,6 +105,22 @@ namespace QLLopHoc.DAO
             }
         }
 
+        public DataTable getDSTaiKhoan() {
+            DataTable dt = new DataTable();
+        
+            using (SqlConnection connection = DatabaseConnect.GetConnection())
+            {
+                string sqlQuery = "SELECT hoten, email, sodienthoai, daxoa FROM TaiKhoan where manhomquyen=2";
+                using(SqlCommand cmd = new SqlCommand(sqlQuery, connection)) {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+                connection.Close();
+                return dt;
+            }
+        }
 
     }
 }

@@ -7,7 +7,7 @@ using QLLopHoc.DTO;
 
 namespace QLLopHoc.Comparer
 {
-    public class TaiKhoanComparer : IComparer<TaiKhoan>
+    public class TaiKhoanComparer : IComparer<TaiKhoanDTO>
     {
         private ComparisonType typeToCompare;
 
@@ -18,10 +18,10 @@ namespace QLLopHoc.Comparer
             mataikhoan, manhomquyen
         }
 
-        public int Compare(TaiKhoan x, TaiKhoan y)
+        public int Compare(TaiKhoanDTO x, TaiKhoanDTO y)
         {
-            TaiKhoan left = x;
-            TaiKhoan right = y;
+            TaiKhoanDTO left = x;
+            TaiKhoanDTO right = y;
             return left.CompareTo(right, typeToCompare);
         }
     }

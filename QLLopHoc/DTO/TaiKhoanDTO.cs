@@ -7,7 +7,7 @@ using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class TaiKhoan
+    public class TaiKhoanDTO
     {
         private string mataikhoan;
         private int manhomquyen;
@@ -27,9 +27,9 @@ namespace QLLopHoc.DTO
         public int Manhomquyen { get => manhomquyen; set => manhomquyen = value; }
         public int Daxoa { get => daxoa; set => daxoa = value; }
 
-        public TaiKhoan() { }
+        public TaiKhoanDTO() { }
 
-        public TaiKhoan(string mataikhoan, string hoten, string email, string matkhau, string sodienthoai, string anhdaidien, int manhomquyen, int daxoa)
+        public TaiKhoanDTO(string mataikhoan, string hoten, string email, string matkhau, string sodienthoai, string anhdaidien, int manhomquyen, int daxoa)
         {
             this.mataikhoan = mataikhoan;
             this.hoten = hoten;
@@ -55,10 +55,10 @@ namespace QLLopHoc.DTO
 
         public int CompareTo(Object obj, Comparer.TaiKhoanComparer.ComparisonType typeToCompare)
         {
-            TaiKhoan taikhoan = (TaiKhoan)obj;
+            TaiKhoanDTO taikhoan = (TaiKhoanDTO)obj;
             return this.mataikhoan.CompareTo(taikhoan.mataikhoan);
         }
-        public int CompareTo(TaiKhoan c1, TaiKhoanComparer.ComparisonType type)
+        public int CompareTo(TaiKhoanDTO c1, TaiKhoanComparer.ComparisonType type)
         {
             switch (type)
             {
