@@ -109,7 +109,7 @@ namespace QLLopHoc.GUI.DangNhap
                                 {
                                     TaiKhoanDTO tk1 = taiKhoanBUS.GetTaiKhoanByEmail(email);
                                     this.Hide();
-                                    Form1 mainfr = new Form1();
+                                    Form1 mainfr = new Form1(tk1);
                                     mainfr.Show();
                                 }
                             } else

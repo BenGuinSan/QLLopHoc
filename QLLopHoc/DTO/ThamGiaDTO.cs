@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace QLLopHoc.DTO
 {
-    public class ThamGia
+    public class ThamGiaDTO
     {
         private string malop;
         private string mataikhoan;
 
-        public ThamGia(string malop = "", string mataikhoan = "")
+        public ThamGiaDTO(string malop = "", string mataikhoan = "")
         {
             this.malop = malop;
             this.mataikhoan = mataikhoan;

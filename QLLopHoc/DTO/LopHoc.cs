@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class LopHoc : IComparable
+    public class LopHocDTO : IComparable
     {
         private string malop;
         private string tenlop;
@@ -15,8 +16,9 @@ namespace QLLopHoc.DTO
         private string avatar;
         private int daxoa;
 
-        public LopHoc() { }
-        public LopHoc(string malop, string tenlop, string mota, string avatar, string magiangvien, int daxoa)
+        public LopHocDTO() { }
+
+        public LopHocDTO(string malop, string tenlop, string mota, string avatar, string magiangvien, int daxoa)
         {
             this.Malop = malop;
             this.Tenlop = tenlop;
@@ -35,19 +37,21 @@ namespace QLLopHoc.DTO
 
         public int CompareTo(Object obj)
         {
-            LopHoc chuong = (LopHoc)obj;
-            return this.Malop.CompareTo(chuong.Malop);
+            LopHocDTO chuong = (LopHocDTO)obj;
+            return Malop.CompareTo(chuong.Malop);
         }
-        /*public int CompareTo(LopHoc c1, LophocComparer.ComparisonType type)
+
+        public int CompareTo(LopHocDTO c1, LopHocComparer.ComparisonType type)
         {
             switch (type)
             {
-                case LophocComparer.ComparisonType.malophoc:
+                case LopHocComparer.ComparisonType.malophoc:
                     return this.Malop.CompareTo(c1.Malop);
-                case LophocComparer.ComparisonType.tenlophoc:
+                case LopHocComparer.ComparisonType.tenlophoc:
                     return this.Tenlop.CompareTo(c1.Tenlop);
             }
             return 0;
-        }*/
+        }
+
     }
 }

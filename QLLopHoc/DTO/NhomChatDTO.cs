@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace QLLopHoc.DTO
 {
-    public class NhomChat
+    public class NhomChatDTO
     {
         private string manhomchat;
         private string malop;
         private string ten;
 
-        public NhomChat(string manhomchat = "", string ten = "", string malop = "")
+        public NhomChatDTO(string manhomchat = "", string ten = "", string malop = "")
         {
             this.manhomchat = manhomchat;
             this.ten = ten;

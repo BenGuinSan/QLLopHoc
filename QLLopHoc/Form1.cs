@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using QLLopHoc.GUI.Home;
 using QLLopHoc.GUI.Todo;
+using QLLopHoc.DTO;
+using QLLopHoc.BUS;
 
 namespace QLLopHoc
 {
@@ -19,10 +21,20 @@ namespace QLLopHoc
     {
         bool sidebarExpand;
         private IconButton currentBtn;
+        private LopHocBUS lopBUS;
+        private TaiKhoanDTO tk;
+        TaiKhoanBUS taikhoanBUS;
 
-        public Form1()
+        public TaiKhoanDTO Tk { get => tk; set => tk = value; }
+
+
+        public Form1(TaiKhoanDTO tk)
         {
             InitializeComponent();
+            this.tk = tk;
+            lopBUS = new LopHocBUS();
+
+
             this.Text = String.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -134,7 +146,6 @@ namespace QLLopHoc
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
      
-
         private void Form1_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
@@ -144,6 +155,28 @@ namespace QLLopHoc
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

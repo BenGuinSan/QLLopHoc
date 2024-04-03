@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
@@ -129,6 +130,27 @@ namespace QLLopHoc.GUI.Admin
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            } else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

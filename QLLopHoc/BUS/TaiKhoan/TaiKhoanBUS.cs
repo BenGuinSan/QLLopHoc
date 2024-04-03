@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLopHoc.Comparer;
 using QLLopHoc.DAO;
 using QLLopHoc.DTO;
 
@@ -17,6 +18,7 @@ namespace QLLopHoc.BUS
         private List<TaiKhoanDTO> list = new List<TaiKhoanDTO>();
         public TaiKhoanDAO dao = new TaiKhoanDAO();
 
+        public List<TaiKhoanDTO> List { get => list; set => list = value; }
 
         // Gán mảng kiểu TaiKhoan được lấy lên ở DAO truyền vào 'list' ở lớp BUS
         public TaiKhoanBUS()
@@ -72,6 +74,17 @@ namespace QLLopHoc.BUS
             }
             return taikhoan;
         }
+        public int GetTaiKhoanByMaTaiKhoan(string mataikhoan)
+        {
+            TaiKhoanComparer comparer = new TaiKhoanComparer();
+            comparer.TypeToCompare = TaiKhoanComparer.ComparisonType.mataikhoan;
+            TaiKhoanDTO tk = new TaiKhoanDTO();
+            tk.Mataikhoan = mataikhoan;
+            this.list.Sort();
+            int index = list.BinarySearch(tk, comparer);
+            return index;
+        }
+
         public Boolean check_matkhau(string password)
         {
             string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+.]).{8,}$";

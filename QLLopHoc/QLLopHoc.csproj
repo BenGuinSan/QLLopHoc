@@ -121,9 +121,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\LopHocBUS.cs" />
+    <Compile Include="BUS\NhomChatBUS.cs" />
     <Compile Include="BUS\TaiKhoan\TaiKhoanBUS.cs" />
+    <Compile Include="BUS\ThamGiaBUS.cs" />
+    <Compile Include="Comparer\LopHocComparer.cs" />
     <Compile Include="Comparer\TaiKhoanComparer.cs" />
+    <Compile Include="DAO\LopHocDAO.cs" />
+    <Compile Include="DAO\NhomChatDAO.cs" />
     <Compile Include="DAO\TaiKhoan\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\ThamGiaDAO.cs" />
+    <Compile Include="DAO\TinNhanNhomChatDAO.cs" />
     <Compile Include="database\DatabaseConnect.cs" />
     <Compile Include="DTO\BaiLamBaiTap.cs" />
     <Compile Include="DTO\BaiLamKiemTra.cs" />
@@ -140,10 +148,10 @@
     <Compile Include="DTO\FileHocLieu.cs" />
     <Compile Include="DTO\HocLieu.cs" />
     <Compile Include="DTO\LopHoc.cs" />
-    <Compile Include="DTO\NhomChat.cs" />
+    <Compile Include="DTO\NhomChatDTO.cs" />
     <Compile Include="DTO\NhomQuyen.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
-    <Compile Include="DTO\ThamGia.cs" />
+    <Compile Include="DTO\ThamGiaDTO.cs" />
     <Compile Include="DTO\TinNhanBanBe.cs" />
     <Compile Include="DTO\TinNhanNhomChat.cs" />
     <Compile Include="Form1.cs">
@@ -170,6 +178,24 @@
     <Compile Include="GUI\Admin\HomeAdminfrm.Designer.cs">
       <DependentUpon>HomeAdminfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Chatbox\Chatboxfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Chatbox\Chatboxfrm.Designer.cs">
+      <DependentUpon>Chatboxfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Chatbox\IncomingMess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Chatbox\IncomingMess.Designer.cs">
+      <DependentUpon>IncomingMess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Chatbox\OutgoingMess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Chatbox\OutgoingMess.Designer.cs">
+      <DependentUpon>OutgoingMess.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DangNhap\Signinfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,11 +208,257 @@
     <Compile Include="GUI\DangNhap\Signupfrm.Designer.cs">
       <DependentUpon>Signupfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonBaiTap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonBaiTap.Designer.cs">
+      <DependentUpon>ButtonBaiTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonBaiKTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonBaiKTra.Designer.cs">
+      <DependentUpon>ButtonBaiKTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonClass.Designer.cs">
+      <DependentUpon>ButtonClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonHocLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\ButtonHocLieu.Designer.cs">
+      <DependentUpon>ButtonHocLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\DropDownGiangDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\DropDownGiangDay.Designer.cs">
+      <DependentUpon>DropDownGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\DropDownThamGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\DropDownThamGia.Designer.cs">
+      <DependentUpon>DropDownThamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\PanelGiaoDienLopHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\HomeComponents\PanelGiaoDienLopHoc.Designer.cs">
+      <DependentUpon>PanelGiaoDienLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Home\Homefrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Home\Homefrm.Designer.cs">
       <DependentUpon>Homefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\TaoLopfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\TaoLopfrm.Designer.cs">
+      <DependentUpon>TaoLopfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\ThamGiaLopfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\ThamGiaLopfrm.Designer.cs">
+      <DependentUpon>ThamGiaLopfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Home\ThongTinLopHocfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Home\ThongTinLopHocfrm.Designer.cs">
+      <DependentUpon>ThongTinLopHocfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\ChiTietCauHoifrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\ChiTietCauHoifrm.Designer.cs">
+      <DependentUpon>ChiTietCauHoifrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\KiemTrafrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\KiemTrafrm.Designer.cs">
+      <DependentUpon>KiemTrafrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\XemBaiLamHocSinhfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\XemBaiLamHocSinhfrm.Designer.cs">
+      <DependentUpon>XemBaiLamHocSinhfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\XemChiTietBaiKTfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\XemChiTietBaiKTfrm.Designer.cs">
+      <DependentUpon>XemChiTietBaiKTfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\XemTienDoBaiKTfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\XemTienDoBaiKTfrm.Designer.cs">
+      <DependentUpon>XemTienDoBaiKTfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\CloudFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\CloudFile.Designer.cs">
+      <DependentUpon>CloudFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\EmptypnlBT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\EmptypnlBT.Designer.cs">
+      <DependentUpon>EmptypnlBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\ChamDiemfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\ChamDiemfrm.Designer.cs">
+      <DependentUpon>ChamDiemfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\ChinhSuaBaiTapfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\ChinhSuaBaiTapfrm.Designer.cs">
+      <DependentUpon>ChinhSuaBaiTapfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\TaoBaiTapfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\TaoBaiTapfrm.Designer.cs">
+      <DependentUpon>TaoBaiTapfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\XemTienDoBaiTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\GiangVien\XemTienDoBaiTap.Designer.cs">
+      <DependentUpon>XemTienDoBaiTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\LocalFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\LocalFile.Designer.cs">
+      <DependentUpon>LocalFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\NopTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\NopTre.Designer.cs">
+      <DependentUpon>NopTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\SinhVien\LamBaiTapfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\SinhVien\LamBaiTapfrm.Designer.cs">
+      <DependentUpon>LamBaiTapfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\SinhVien\XemBaiLamfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiTap\SinhVien\XemBaiLamfrm.Designer.cs">
+      <DependentUpon>XemBaiLamfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\HienThiMaLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\HienThiMaLopHoc.Designer.cs">
+      <DependentUpon>HienThiMaLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KhoaHocfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KhoaHocfrm.Designer.cs">
+      <DependentUpon>KhoaHocfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTrafrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTrafrm.Designer.cs">
+      <DependentUpon>KiemTrafrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\LamKTfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\LamKTfrm.Designer.cs">
+      <DependentUpon>LamKTfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\TaiLieu\HienThiTaiLieufrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\TaiLieu\HienThiTaiLieufrm.Designer.cs">
+      <DependentUpon>HienThiTaiLieufrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\TaoDeMucfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\TaoDeMucfrm.Designer.cs">
+      <DependentUpon>TaoDeMucfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\TaiLieu\TaoTaiLieufrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\TaiLieu\TaoTaiLieufrm.Designer.cs">
+      <DependentUpon>TaoTaiLieufrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\ThemCauHoifrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\BaiKT\ThemCauHoifrm.Designer.cs">
+      <DependentUpon>ThemCauHoifrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThanhTich\ThanhTichGVfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThanhTich\ThanhTichGVfrm.Designer.cs">
+      <DependentUpon>ThanhTichGVfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThanhTich\ThanhTichSVfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThanhTich\ThanhTichSVfrm.Designer.cs">
+      <DependentUpon>ThanhTichSVfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskDoneButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskDoneButton.Designer.cs">
+      <DependentUpon>TaskDoneButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskEmpty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskEmpty.Designer.cs">
+      <DependentUpon>TaskEmpty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskExam.Designer.cs">
+      <DependentUpon>TaskExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskHomeWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskHomeWork.Designer.cs">
+      <DependentUpon>TaskHomeWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskList.Designer.cs">
+      <DependentUpon>TaskList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskNotDoneButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Todo\TaskNotDoneButton.Designer.cs">
+      <DependentUpon>TaskNotDoneButton.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Todo\Todofrm.cs">
       <SubType>Form</SubType>
@@ -211,14 +483,116 @@
     <EmbeddedResource Include="GUI\Admin\HomeAdminfrm.resx">
       <DependentUpon>HomeAdminfrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chatbox\Chatboxfrm.resx">
+      <DependentUpon>Chatboxfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chatbox\IncomingMess.resx">
+      <DependentUpon>IncomingMess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chatbox\OutgoingMess.resx">
+      <DependentUpon>OutgoingMess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhap\Signinfrm.resx">
       <DependentUpon>Signinfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhap\Signupfrm.resx">
       <DependentUpon>Signupfrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\HomeComponents\ButtonBaiTap.resx">
+      <DependentUpon>ButtonBaiTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\HomeComponents\ButtonBaiKTra.resx">
+      <DependentUpon>ButtonBaiKTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\HomeComponents\ButtonClass.resx">
+      <DependentUpon>ButtonClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\HomeComponents\ButtonHocLieu.resx">
+      <DependentUpon>ButtonHocLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\HomeComponents\DropDownGiangDay.resx">
+      <DependentUpon>DropDownGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\HomeComponents\DropDownThamGia.resx">
+      <DependentUpon>DropDownThamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\HomeComponents\PanelGiaoDienLopHoc.resx">
+      <DependentUpon>PanelGiaoDienLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Home\Homefrm.resx">
       <DependentUpon>Homefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\TaoLopfrm.resx">
+      <DependentUpon>TaoLopfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\ThamGiaLopfrm.resx">
+      <DependentUpon>ThamGiaLopfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Home\ThongTinLopHocfrm.resx">
+      <DependentUpon>ThongTinLopHocfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\CloudFile.resx">
+      <DependentUpon>CloudFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\EmptypnlBT.resx">
+      <DependentUpon>EmptypnlBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\GiangVien\ChamDiemfrm.resx">
+      <DependentUpon>ChamDiemfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\GiangVien\ChinhSuaBaiTapfrm.resx">
+      <DependentUpon>ChinhSuaBaiTapfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\GiangVien\TaoBaiTapfrm.resx">
+      <DependentUpon>TaoBaiTapfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\GiangVien\XemTienDoBaiTap.resx">
+      <DependentUpon>XemTienDoBaiTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\LocalFile.resx">
+      <DependentUpon>LocalFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\NopTre.resx">
+      <DependentUpon>NopTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\HienThiMaLopHoc.resx">
+      <DependentUpon>HienThiMaLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KhoaHocfrm.resx">
+      <DependentUpon>KhoaHocfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\TaiLieu\HienThiTaiLieufrm.resx">
+      <DependentUpon>HienThiTaiLieufrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\TaoDeMucfrm.resx">
+      <DependentUpon>TaoDeMucfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\TaiLieu\TaoTaiLieufrm.resx">
+      <DependentUpon>TaoTaiLieufrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThanhTich\ThanhTichGVfrm.resx">
+      <DependentUpon>ThanhTichGVfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThanhTich\ThanhTichSVfrm.resx">
+      <DependentUpon>ThanhTichSVfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Todo\TaskDoneButton.resx">
+      <DependentUpon>TaskDoneButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Todo\TaskEmpty.resx">
+      <DependentUpon>TaskEmpty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Todo\TaskExam.resx">
+      <DependentUpon>TaskExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Todo\TaskHomeWork.resx">
+      <DependentUpon>TaskHomeWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Todo\TaskList.resx">
+      <DependentUpon>TaskList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Todo\TaskNotDoneButton.resx">
+      <DependentUpon>TaskNotDoneButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Todo\Todofrm.resx">
       <DependentUpon>Todofrm.cs</DependentUpon>
@@ -291,6 +665,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\KhoaHoc\BaiKT\KiemTraComponents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\up-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\upload-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\check-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\homework.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
