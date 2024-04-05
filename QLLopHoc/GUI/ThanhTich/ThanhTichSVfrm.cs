@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLLopHoc.DTO;
 
 namespace QLLopHoc.GUI.KhoaHoc
 {
     public partial class ThanhTichSVfrm : Form
     {
-        public ThanhTichSVfrm()
+        TaiKhoanDTO taikhoan;
+        LopHocDTO lophoc;
+        public ThanhTichSVfrm(LopHocDTO lophoc, TaiKhoanDTO taikhoan)
         {
             InitializeComponent();
+            this.taikhoan = taikhoan;
+            this.lophoc = lophoc;
         }
     }
 }

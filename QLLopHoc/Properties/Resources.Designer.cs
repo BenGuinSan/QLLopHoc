@@ -103,6 +103,26 @@ namespace QLLopHoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exam_64 {
+            get {
+                object obj = ResourceManager.GetObject("exam-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exam1 {
+            get {
+                object obj = ResourceManager.GetObject("exam1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eyes {
             get {
                 object obj = ResourceManager.GetObject("eyes", resourceCulture);
@@ -156,6 +176,16 @@ namespace QLLopHoc.Properties {
         internal static System.Drawing.Bitmap homework {
             get {
                 object obj = ResourceManager.GetObject("homework", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_exam_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-exam-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

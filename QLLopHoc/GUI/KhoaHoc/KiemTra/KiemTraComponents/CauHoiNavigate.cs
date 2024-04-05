@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLopHoc.GUI.KhoaHoc.BaiKT
+namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
 {
-    public partial class XemChiTietBaiKTfrm : Form
+    public partial class CauHoiNavigate : UserControl
     {
-        public XemChiTietBaiKTfrm()
+        public CauHoiNavigate()
         {
             InitializeComponent();
         }

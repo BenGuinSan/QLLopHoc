@@ -63,7 +63,10 @@ namespace QLLopHoc.GUI.Home.HomeComponents
 
         private void btnThanhTich_Click(object sender, EventArgs e)
         {
-
+            if (lophoc.Magiangvien.Equals(taikhoan.Mataikhoan))
+                addFormtoPanelHomeContainer(new ThanhTichGVfrm(this.lophoc));
+            else
+                addFormtoPanelHomeContainer(new ThanhTichSVfrm(this.lophoc, this.taikhoan));
         }
 
         private void btnChinhSuaLopHoc_Click(object sender, EventArgs e)

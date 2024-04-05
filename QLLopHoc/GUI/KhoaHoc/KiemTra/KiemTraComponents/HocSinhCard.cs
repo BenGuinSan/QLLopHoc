@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLopHoc.GUI.KhoaHoc.BaiKT
+namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
 {
-    public partial class ChiTietCauHoifrm : Form
+    public partial class HocSinhCard : UserControl
     {
-        public ChiTietCauHoifrm()
+        public HocSinhCard()
         {
             InitializeComponent();
         }

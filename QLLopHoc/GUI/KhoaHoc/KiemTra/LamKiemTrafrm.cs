@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLopHoc.GUI.KhoaHoc
+namespace QLLopHoc.GUI.KhoaHoc.KiemTra
 {
-    public partial class LamKTfrm : Form
+    public partial class LamKiemTrafrm : Form
     {
-        public LamKTfrm()
+        public LamKiemTrafrm()
         {
             InitializeComponent();
+        }
+
+        private void LamKiemTrafrm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

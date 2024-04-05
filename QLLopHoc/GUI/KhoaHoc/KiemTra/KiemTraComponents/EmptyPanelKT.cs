@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLLopHoc.GUI.KhoaHoc
+namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
 {
-    public partial class ThemCauHoifrm : Form
+    public partial class EmptyPanelKT : UserControl
     {
-        public ThemCauHoifrm()
+        public EmptyPanelKT()
         {
             InitializeComponent();
         }

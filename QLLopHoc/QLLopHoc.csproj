@@ -108,6 +108,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -274,36 +275,6 @@
     <Compile Include="GUI\Home\ThongTinLopHocfrm.Designer.cs">
       <DependentUpon>ThongTinLopHocfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\ChiTietCauHoifrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\ChiTietCauHoifrm.Designer.cs">
-      <DependentUpon>ChiTietCauHoifrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\KiemTrafrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\KiemTrafrm.Designer.cs">
-      <DependentUpon>KiemTrafrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\XemBaiLamHocSinhfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\XemBaiLamHocSinhfrm.Designer.cs">
-      <DependentUpon>XemBaiLamHocSinhfrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\XemChiTietBaiKTfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\XemChiTietBaiKTfrm.Designer.cs">
-      <DependentUpon>XemChiTietBaiKTfrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\XemTienDoBaiKTfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\XemTienDoBaiKTfrm.Designer.cs">
-      <DependentUpon>XemTienDoBaiKTfrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\KhoaHoc\BaiTap\CloudFile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -376,17 +347,83 @@
     <Compile Include="GUI\KhoaHoc\KhoaHocfrm.Designer.cs">
       <DependentUpon>KhoaHocfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\ButtonCauHoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\ButtonCauHoi.Designer.cs">
+      <DependentUpon>ButtonCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\CauHoiNavigate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\CauHoiNavigate.Designer.cs">
+      <DependentUpon>CauHoiNavigate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\CauHoiPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\CauHoiPanel.Designer.cs">
+      <DependentUpon>CauHoiPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\EmptyPanelKT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\EmptyPanelKT.Designer.cs">
+      <DependentUpon>EmptyPanelKT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\HocSinhCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\HocSinhCard.Designer.cs">
+      <DependentUpon>HocSinhCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\PanelChiTietCauHoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\PanelChiTietCauHoi.Designer.cs">
+      <DependentUpon>PanelChiTietCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\PanelChiTietCauTraLoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\PanelChiTietCauTraLoi.Designer.cs">
+      <DependentUpon>PanelChiTietCauTraLoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhoaHoc\KiemTra\KiemTrafrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\KhoaHoc\KiemTra\KiemTrafrm.Designer.cs">
       <DependentUpon>KiemTrafrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\LamKTfrm.cs">
+    <Compile Include="GUI\KhoaHoc\KiemTra\LamKiemTrafrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\LamKTfrm.Designer.cs">
-      <DependentUpon>LamKTfrm.cs</DependentUpon>
+    <Compile Include="GUI\KhoaHoc\KiemTra\LamKiemTrafrm.Designer.cs">
+      <DependentUpon>LamKiemTrafrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\ThemCauHoifrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\ThemCauHoifrm.Designer.cs">
+      <DependentUpon>ThemCauHoifrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\XemBaiLamHocSinhfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\XemBaiLamHocSinhfrm.Designer.cs">
+      <DependentUpon>XemBaiLamHocSinhfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\XemChiTietBaiKTfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\XemChiTietBaiKTfrm.Designer.cs">
+      <DependentUpon>XemChiTietBaiKTfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\XemTienDoBaiKTfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaHoc\KiemTra\XemTienDoBaiKTfrm.Designer.cs">
+      <DependentUpon>XemTienDoBaiKTfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhoaHoc\TaiLieu\HienThiTaiLieufrm.cs">
       <SubType>Form</SubType>
@@ -405,12 +442,6 @@
     </Compile>
     <Compile Include="GUI\KhoaHoc\TaiLieu\TaoTaiLieufrm.Designer.cs">
       <DependentUpon>TaoTaiLieufrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\ThemCauHoifrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhoaHoc\BaiKT\ThemCauHoifrm.Designer.cs">
-      <DependentUpon>ThemCauHoifrm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ThanhTich\ThanhTichGVfrm.cs">
       <SubType>Form</SubType>
@@ -561,6 +592,45 @@
     <EmbeddedResource Include="GUI\KhoaHoc\KhoaHocfrm.resx">
       <DependentUpon>KhoaHocfrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\ButtonCauHoi.resx">
+      <DependentUpon>ButtonCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\CauHoiNavigate.resx">
+      <DependentUpon>CauHoiNavigate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\CauHoiPanel.resx">
+      <DependentUpon>CauHoiPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\EmptyPanelKT.resx">
+      <DependentUpon>EmptyPanelKT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\HocSinhCard.resx">
+      <DependentUpon>HocSinhCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\PanelChiTietCauHoi.resx">
+      <DependentUpon>PanelChiTietCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTraComponents\PanelChiTietCauTraLoi.resx">
+      <DependentUpon>PanelChiTietCauTraLoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\KiemTrafrm.resx">
+      <DependentUpon>KiemTrafrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\LamKiemTrafrm.resx">
+      <DependentUpon>LamKiemTrafrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\ThemCauHoifrm.resx">
+      <DependentUpon>ThemCauHoifrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\XemBaiLamHocSinhfrm.resx">
+      <DependentUpon>XemBaiLamHocSinhfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\XemChiTietBaiKTfrm.resx">
+      <DependentUpon>XemChiTietBaiKTfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaHoc\KiemTra\XemTienDoBaiKTfrm.resx">
+      <DependentUpon>XemTienDoBaiKTfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoaHoc\TaiLieu\HienThiTaiLieufrm.resx">
       <DependentUpon>HienThiTaiLieufrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -666,9 +736,7 @@
   <ItemGroup>
     <None Include="icon\minus.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\KhoaHoc\BaiKT\KiemTraComponents\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="icon\up-arrow.png" />
   </ItemGroup>
