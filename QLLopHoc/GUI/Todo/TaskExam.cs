@@ -16,5 +16,15 @@ namespace QLLopHoc.GUI.Todo
         {
             InitializeComponent();
         }
+
+        private void lblExamTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

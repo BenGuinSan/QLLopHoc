@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace QLLopHoc.GUI.Todo
 {
@@ -15,6 +16,21 @@ namespace QLLopHoc.GUI.Todo
         public TaskNotDoneButton()
         {
             InitializeComponent();
+        }
+
+        public KryptonButton btnNotDone()
+        {
+            return this.btnChuaxuly;
+        }
+
+        private void lblNotDone_Click(object sender, EventArgs e)
+        {
+            btnChuaxuly.PerformClick();
+        }
+
+        private void sangclockPic_Click(object sender, EventArgs e)
+        {
+            btnChuaxuly.PerformClick();
         }
     }
 }

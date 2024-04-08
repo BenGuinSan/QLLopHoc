@@ -23,6 +23,11 @@ namespace QLLopHoc
         private IconButton currentBtn;
         private LopHocBUS lopBUS;
         private TaiKhoanDTO tk;
+        private BaiTapBUS btBUS;
+        private DeKiemTraBUS dktBUS;
+        private BaiLamBaiTapBUS blbtBUS;
+        private BaiLamKiemTraBUS blktBUS;
+        private ChuongBUS chuongBUS;
         TaiKhoanBUS taikhoanBUS;
 
         public TaiKhoanDTO Tk { get => tk; set => tk = value; }
@@ -33,6 +38,12 @@ namespace QLLopHoc
             InitializeComponent();
             this.tk = tk;
             lopBUS = new LopHocBUS();
+            dktBUS = new DeKiemTraBUS();
+            btBUS = new BaiTapBUS();
+            taikhoanBUS = new TaiKhoanBUS();
+            blbtBUS = new BaiLamBaiTapBUS();
+            blktBUS = new BaiLamKiemTraBUS();
+
 
 
             this.Text = String.Empty;
@@ -58,7 +69,6 @@ namespace QLLopHoc
                 currentBtn = (IconButton)sender;
                 currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
-
                 currentBtn.IconColor = color;
             }
 
@@ -90,6 +100,8 @@ namespace QLLopHoc
             this.mainpanel.Tag = f;
             f.Show();
         }
+
+
         
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
@@ -131,11 +143,10 @@ namespace QLLopHoc
             loadform(new Homefrm(this));
         }
 
-
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void btnTodo_Click_1(object sender, EventArgs e)
         {
             activeButton(sender, RGBColors.color2);
-            loadform(new Todofrm(this));
+            loadform(new Todofrm(this.tk, this.btBUS, this.lopBUS, this.dktBUS, this.chuongBUS, this.blbtBUS, this.blktBUS));
         }
 
 
@@ -178,5 +189,6 @@ namespace QLLopHoc
         {
             WindowState = FormWindowState.Minimized;
         }
+
     }
 }

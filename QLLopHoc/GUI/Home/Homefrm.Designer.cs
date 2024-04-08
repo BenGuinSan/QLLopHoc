@@ -52,17 +52,18 @@ namespace QLLopHoc.GUI.Home
             this.panelHomeContainer.Controls.Add(this.kryptonPanel1);
             this.panelHomeContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHomeContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelHomeContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelHomeContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHomeContainer.Name = "panelHomeContainer";
-            this.panelHomeContainer.Size = new System.Drawing.Size(1123, 793);
+            this.panelHomeContainer.Size = new System.Drawing.Size(842, 644);
             this.panelHomeContainer.TabIndex = 0;
             // 
             // pnlGiaoDienLopHocContainer
             // 
             this.pnlGiaoDienLopHocContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGiaoDienLopHocContainer.Location = new System.Drawing.Point(408, 0);
+            this.pnlGiaoDienLopHocContainer.Location = new System.Drawing.Point(306, 0);
+            this.pnlGiaoDienLopHocContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlGiaoDienLopHocContainer.Name = "pnlGiaoDienLopHocContainer";
-            this.pnlGiaoDienLopHocContainer.Size = new System.Drawing.Size(715, 793);
+            this.pnlGiaoDienLopHocContainer.Size = new System.Drawing.Size(536, 644);
             this.pnlGiaoDienLopHocContainer.TabIndex = 2;
             // 
             // kryptonPanel1
@@ -71,9 +72,9 @@ namespace QLLopHoc.GUI.Home
             this.kryptonPanel1.Controls.Add(this.panel1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(408, 793);
+            this.kryptonPanel1.Size = new System.Drawing.Size(306, 644);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(248)))));
             this.kryptonPanel1.TabIndex = 1;
             // 
@@ -83,33 +84,33 @@ namespace QLLopHoc.GUI.Home
             this.pnlLopHocContainer.BackColor = System.Drawing.SystemColors.Control;
             this.pnlLopHocContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLopHocContainer.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlLopHocContainer.Location = new System.Drawing.Point(0, 155);
-            this.pnlLopHocContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlLopHocContainer.Location = new System.Drawing.Point(0, 126);
+            this.pnlLopHocContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlLopHocContainer.Name = "pnlLopHocContainer";
-            this.pnlLopHocContainer.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.pnlLopHocContainer.Size = new System.Drawing.Size(408, 638);
+            this.pnlLopHocContainer.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.pnlLopHocContainer.Size = new System.Drawing.Size(306, 518);
             this.pnlLopHocContainer.TabIndex = 5;
             this.pnlLopHocContainer.WrapContents = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(248)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.btnTaoLop);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.btnThamGia);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(408, 155);
+            this.panel1.Size = new System.Drawing.Size(306, 126);
             this.panel1.TabIndex = 3;
             // 
             // btnTaoLop
             // 
             this.btnTaoLop.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.btnTaoLop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTaoLop.Location = new System.Drawing.Point(211, 78);
-            this.btnTaoLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTaoLop.Location = new System.Drawing.Point(158, 63);
+            this.btnTaoLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTaoLop.Name = "btnTaoLop";
             this.btnTaoLop.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnTaoLop.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -120,7 +121,7 @@ namespace QLLopHoc.GUI.Home
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTaoLop.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnTaoLop.Size = new System.Drawing.Size(181, 60);
+            this.btnTaoLop.Size = new System.Drawing.Size(136, 49);
             this.btnTaoLop.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnTaoLop.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnTaoLop.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoLop.StateCommon.Back.Image")));
@@ -170,10 +171,10 @@ namespace QLLopHoc.GUI.Home
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(23, 25);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimKiem.Location = new System.Drawing.Point(17, 20);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(360, 34);
+            this.txtTimKiem.Size = new System.Drawing.Size(270, 30);
             this.txtTimKiem.StateActive.Border.Color1 = System.Drawing.Color.Black;
             this.txtTimKiem.StateActive.Border.Color2 = System.Drawing.Color.Black;
             this.txtTimKiem.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -196,8 +197,8 @@ namespace QLLopHoc.GUI.Home
             // 
             this.btnThamGia.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.btnThamGia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThamGia.Location = new System.Drawing.Point(12, 78);
-            this.btnThamGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThamGia.Location = new System.Drawing.Point(9, 63);
+            this.btnThamGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThamGia.Name = "btnThamGia";
             this.btnThamGia.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnThamGia.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -208,7 +209,7 @@ namespace QLLopHoc.GUI.Home
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnThamGia.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnThamGia.Size = new System.Drawing.Size(180, 60);
+            this.btnThamGia.Size = new System.Drawing.Size(135, 49);
             this.btnThamGia.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnThamGia.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnThamGia.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnThamGia.StateCommon.Back.Image")));
@@ -258,12 +259,12 @@ namespace QLLopHoc.GUI.Home
             // 
             // Homefrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 793);
+            this.ClientSize = new System.Drawing.Size(842, 644);
             this.Controls.Add(this.panelHomeContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Homefrm";
             this.Text = "Home";
             this.panelHomeContainer.ResumeLayout(false);
