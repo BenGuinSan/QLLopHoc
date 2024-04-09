@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QLLopHoc.BUS;
 using QLLopHoc.DTO;
 using QLLopHoc.GUI.Home.HomeComponents;
+using QLLopHoc.GUI.KhoaHoc;
 
 namespace QLLopHoc.GUI.Home
 {
@@ -50,6 +51,11 @@ namespace QLLopHoc.GUI.Home
         {
             Clipboard.SetText(txtMaLop.Text);
             MessageBox.Show("Đã chép vào bộ nhớ tạm thời!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnMoRong_Click(object sender, EventArgs e)
+        {
+            new HienThiMaLopHocfrm(lophoc.Malop).ShowDialog();
         }
     }
 }

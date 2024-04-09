@@ -338,11 +338,11 @@
     <Compile Include="GUI\KhoaHoc\BaiTap\SinhVien\XemBaiLamfrm.Designer.cs">
       <DependentUpon>XemBaiLamfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhoaHoc\HienThiMaLopHoc.cs">
+    <Compile Include="GUI\Home\HienThiMaLopHocfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhoaHoc\HienThiMaLopHoc.Designer.cs">
-      <DependentUpon>HienThiMaLopHoc.cs</DependentUpon>
+    <Compile Include="GUI\Home\HienThiMaLopHocfrm.Designer.cs">
+      <DependentUpon>HienThiMaLopHocfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhoaHoc\KhoaHocfrm.cs">
       <SubType>Form</SubType>
@@ -589,8 +589,8 @@
     <EmbeddedResource Include="GUI\KhoaHoc\BaiTap\NopTre.resx">
       <DependentUpon>NopTre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhoaHoc\HienThiMaLopHoc.resx">
-      <DependentUpon>HienThiMaLopHoc.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Home\HienThiMaLopHocfrm.resx">
+      <DependentUpon>HienThiMaLopHocfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhoaHoc\KhoaHocfrm.resx">
       <DependentUpon>KhoaHocfrm.cs</DependentUpon>

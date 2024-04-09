@@ -213,7 +213,6 @@ namespace QLLopHoc.DAO
             }
         }
 
-
         public DataTable LayAllLopHoc()
         {
 

@@ -81,6 +81,23 @@ namespace QLLopHoc.GUI.Home
             }
         }
 
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            ArrayList searchList = new ArrayList();
+            if (txtTimKiem.Text == "Tìm kiếm tên lớp học") return;
+            if (txtTimKiem.Text.Trim() == " ") return;
+            // Loc qua toan bo danh sach lop hoc ma tai khoan co ma tai khoan dang dang nhap tham gia
+            foreach(LopHocDTO lophoc in lophocBUS.GetDanhSachTatCaLopHocByMaTaiKhoan(tk.Mataikhoan))
+            {
+                // Neu co lop nhap vao trung voi thuoc tinh "Tenlop" thi bo cac lop do vao 1 danh sach 
+                if (lophoc.Tenlop.ToLower().Contains(txtTimKiem.Text.Trim().ToLower()))
+                {
+                    searchList.Add(lophoc);
+                }   
+            }
+            HienThiDanhSachLopHoc(searchList);
+        }
+
         /*public void HienThiDanhSachLopHocGiangDay(ArrayList list)
         {
      

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLLopHoc.GUI.KhoaHoc
 {
-    public partial class HienThiMaLopHoc : Form
+    public partial class HienThiMaLopHocfrm : Form
     {
-        public HienThiMaLopHoc(string malop)
+        public HienThiMaLopHocfrm(string malop)
         {
             InitializeComponent();
             this.lblMaLop.Text = malop;
