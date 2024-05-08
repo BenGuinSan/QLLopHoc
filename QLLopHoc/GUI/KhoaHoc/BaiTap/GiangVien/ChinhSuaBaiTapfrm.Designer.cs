@@ -100,7 +100,7 @@
             // lblClass
             // 
             this.lblClass.AutoEllipsis = true;
-            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.Location = new System.Drawing.Point(3, 76);
             this.lblClass.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblClass.Name = "lblClass";
@@ -120,7 +120,7 @@
             // lblChuong
             // 
             this.lblChuong.AutoEllipsis = true;
-            this.lblChuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChuong.Location = new System.Drawing.Point(3, 143);
             this.lblChuong.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblChuong.Name = "lblChuong";
@@ -140,7 +140,7 @@
             // lblTeacher
             // 
             this.lblTeacher.AutoEllipsis = true;
-            this.lblTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTeacher.Location = new System.Drawing.Point(3, 210);
             this.lblTeacher.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblTeacher.Name = "lblTeacher";
@@ -182,7 +182,7 @@
             this.label14.Location = new System.Drawing.Point(3, 324);
             this.label14.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(320, 23);
+            this.label14.Size = new System.Drawing.Size(263, 23);
             this.label14.TabIndex = 10;
             this.label14.Text = "Kết thúc vào:";
             // 
@@ -205,6 +205,7 @@
             this.dtpThoiGianKetThuc.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpThoiGianKetThuc.TabIndex = 13;
             this.dtpThoiGianKetThuc.ValueNullable = new System.DateTime(2024, 11, 23, 10, 35, 0, 0);
+            this.dtpThoiGianKetThuc.ValueChanged += new System.EventHandler(this.dtpThoiGianKetThuc_ValueChanged);
             // 
             // cbkLateSubmit
             // 
@@ -251,6 +252,7 @@
             this.saveHomework.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.saveHomework.TabIndex = 34;
             this.saveHomework.Values.Text = "Lưu bài tập";
+            this.saveHomework.Click += new System.EventHandler(this.saveHomework_Click);
             // 
             // addAnswer
             // 
@@ -264,10 +266,11 @@
             this.addAnswer.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addAnswer.TabIndex = 33;
             this.addAnswer.Values.Text = "Thêm đáp án";
+            this.addAnswer.Click += new System.EventHandler(this.addAnswer_Click);
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(154, 469);
+            this.btnUpload.Location = new System.Drawing.Point(156, 469);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(33, 29);
             this.btnUpload.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -277,6 +280,7 @@
             this.btnUpload.TabIndex = 32;
             this.btnUpload.Values.Image = global::QLLopHoc.Properties.Resources.upload_16;
             this.btnUpload.Values.Text = "";
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // label3
             // 
@@ -309,6 +313,7 @@
             this.lblPlaceholderContent.Size = new System.Drawing.Size(156, 22);
             this.lblPlaceholderContent.TabIndex = 28;
             this.lblPlaceholderContent.Text = "Nội dung bài tập...";
+            this.lblPlaceholderContent.Click += new System.EventHandler(this.lblPlaceholderContent_Click);
             // 
             // lblCharCountContent
             // 
@@ -337,6 +342,7 @@
             this.txtContent.StateCommon.Content.Padding = new System.Windows.Forms.Padding(20, 8, -1, -1);
             this.txtContent.TabIndex = 29;
             this.txtContent.Text = "";
+            this.txtContent.TextChanged += new System.EventHandler(this.txtContent_TextChanged);
             // 
             // lblPlaceholderTitle
             // 
@@ -351,6 +357,7 @@
             this.lblPlaceholderTitle.TabIndex = 25;
             this.lblPlaceholderTitle.Tag = "ádasd";
             this.lblPlaceholderTitle.Text = "Tiêu đề bài tập";
+            this.lblPlaceholderTitle.Click += new System.EventHandler(this.lblPlaceholderTitle_Click);
             // 
             // lblCharCountTitle
             // 
@@ -379,6 +386,7 @@
             this.txtTitle.StateCommon.Content.Padding = new System.Windows.Forms.Padding(20, 8, -1, -1);
             this.txtTitle.TabIndex = 24;
             this.txtTitle.Text = "";
+            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // ChinhSuaBaiTapfrm
             // 
@@ -400,6 +408,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ChinhSuaBaiTapfrm";
             this.Text = "Chỉnh sửa bài tập";
+            this.Load += new System.EventHandler(this.ChinhSuaBaiTapfrm_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);

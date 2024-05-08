@@ -94,79 +94,6 @@ namespace QLLopHoc.DAO
             return listTmp;
         }
 
-        public ArrayList GetDanhSachLopHocGiangDayByMaTaiKhoan(string mataikhoan)
-        {
-            ArrayList listTmp = new ArrayList();
-            try
-            {
-                string sql_get_giangday =
-                    "select l.* \r\n" +
-                    "from lophoc l join thamgialophoc tg on l.malophoc = tg.malophoc \r\n" +
-                    "join taikhoan tk on tk.mataikhoan = tg.mataikhoan\r\n" +
-                    "where tk.mataikhoan = @mataikhoan\r\n";
-                SqlCommand cmd = new SqlCommand(sql_get_giangday, DatabaseConnect.GetConnection());
-                cmd.Parameters.AddWithValue("@mataikhoan", mataikhoan);
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    LopHocDTO tmp = new LopHocDTO();
-                    tmp.Malop = dr["malophoc"].ToString();
-                    tmp.Mota = dr["mota"].ToString();
-                    tmp.Daxoa = int.Parse(dr["daxoa"].ToString());
-                    tmp.Avatar = dr["anhdaidien"].ToString();
-                    tmp.Magiangvien = dr["magiangvien"].ToString();
-                    tmp.Tenlop = dr["ten"].ToString();
-                    listTmp.Add(tmp);
-                }
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi xảy ra ở file LophocDAO:" + ex.Message);
-            }
-            finally
-            {
-                DatabaseConnect.CloseConnection();
-            }
-            return listTmp;
-        }
-
-        public ArrayList GetDanhSachLopHocThamGiaByMaTaiKhoan(string mataikhoan)
-        {
-            ArrayList listTmp = new ArrayList();
-            try
-            {
-                string sql_get_giangday =
-                    "select lophoc.* \r\n" +
-                    "from lophoc join taikhoan on lophoc.magiangvien = taikhoan.mataikhoan\r\n" +
-                    "where taikhoan.mataikhoan= @mataikhoan";
-                SqlCommand cmd = new SqlCommand(sql_get_giangday, DatabaseConnect.GetConnection());
-                cmd.Parameters.AddWithValue("@mataikhoan", mataikhoan);
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    LopHocDTO tmp = new LopHocDTO();
-                    tmp.Malop = dr["malophoc"].ToString();
-                    tmp.Mota = dr["mota"].ToString();
-                    tmp.Daxoa = int.Parse(dr["daxoa"].ToString());
-                    tmp.Avatar = dr["anhdaidien"].ToString();
-                    tmp.Magiangvien = dr["magiangvien"].ToString();
-                    tmp.Tenlop = dr["ten"].ToString();
-                    listTmp.Add(tmp);
-                }
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi xảy ra ở file LophocDAO:" + ex.Message);
-            }
-            finally
-            {
-                DatabaseConnect.CloseConnection();
-            }
-            return listTmp;
-        }
-
         public DataTable LayDanhSachLopHoc()
         {
             DataTable dataTable = new DataTable();
@@ -213,20 +140,85 @@ namespace QLLopHoc.DAO
             }
         }
 
-        public DataTable LayAllLopHoc()
+        public bool SuaLopHoc(LopHocDTO lophoc)
         {
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = "select * from lophoc ";
-            command.Connection = DatabaseConnect.GetConnection();
-            adapter.SelectCommand = command;
-            dt.Clear();
-            adapter.Fill(dt);
-            DatabaseConnect.CloseConnection();
-            return dt;
+            try
+            {
+                string sql_sualophoc = "UPDATE lophoc SET ten = N'" + lophoc.Tenlop + "', mota = N'" + lophoc.Mota + "' WHERE malophoc = @malophoc";
+                SqlCommand cmd_sualophoc = new SqlCommand(sql_sualophoc, DatabaseConnect.GetConnection());
+                cmd_sualophoc.Parameters.AddWithValue("@malophoc", Guid.Parse(lophoc.Malop));
+                cmd_sualophoc.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xảy ra ở file LophocDAO:" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                DatabaseConnect.CloseConnection();
+            }
         }
+
+        public bool XoaLopHoc(string malop)
+        {
+            try
+            {
+                string sql_sualophoc = "UPDATE lophoc SET daxoa = 1 WHERE malophoc = @malophoc";
+                SqlCommand cmd_sualophoc = new SqlCommand(sql_sualophoc, DatabaseConnect.GetConnection());
+                cmd_sualophoc.Parameters.AddWithValue("@malophoc", Guid.Parse(malop));
+                cmd_sualophoc.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xảy ra ở file LophocDAO:" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                DatabaseConnect.CloseConnection();
+            }
+        }
+        public void ban_lop(string malop)
+        {
+            using (SqlConnection conn = DatabaseConnect.GetConnection())
+            {
+                string sqlstring = "Update lophoc set daxoa=1 where malophoc=@malop";
+                using (SqlCommand command = new SqlCommand(sqlstring, conn))
+                {
+                    command.Parameters.AddWithValue("@malop", malop);
+                    int temp = command.ExecuteNonQuery();
+                }
+            }
+        }
+        public void unban_lop(string malop)
+        {
+            using (SqlConnection conn = DatabaseConnect.GetConnection())
+            {
+                string sqlstring = "Update lophoc set daxoa=0 where malophoc=@malop";
+                using (SqlCommand command = new SqlCommand(sqlstring, conn))
+                {
+                    command.Parameters.AddWithValue("@malop", malop);
+                    int temp = command.ExecuteNonQuery();
+                }
+            }
+        }
+        public void update_anhlop(string tenhinh, string malophoc)
+        {
+            using (SqlConnection conn = DatabaseConnect.GetConnection())
+            {
+                string sqlstring = "Update lophoc set anhdaidien=@anhdaidien where malophoc=@malophoc";
+                using (SqlCommand command = new SqlCommand(sqlstring, conn))
+                {
+                    command.Parameters.AddWithValue("@anhdaidien", tenhinh);
+                    command.Parameters.AddWithValue("@malophoc", malophoc);
+                    int temp = command.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 
    

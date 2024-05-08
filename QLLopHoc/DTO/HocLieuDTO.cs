@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class HocLieu
+    public class HocLieuDTO: IComparable
     {
         private string mahoclieu;
         private string machuong;
@@ -15,7 +17,7 @@ namespace QLLopHoc.DTO
         private int daxoa;
         private DateTime thoigiantao;
 
-        public HocLieu(string mahoclieu = "", string tieude = "", string noidung = "", string machuong = "", int daxoa = 0, DateTime thoigiantao = default)
+        public HocLieuDTO(string mahoclieu = "", string tieude = "", string noidung = "", string machuong = "", int daxoa = 0, DateTime thoigiantao = default)
         {
             this.mahoclieu = mahoclieu;
             this.tieude = tieude;
@@ -31,5 +33,21 @@ namespace QLLopHoc.DTO
         public string Machuong { get => machuong; set => machuong = value; }
         public int Daxoa { get => daxoa; set => daxoa = value; }
         public DateTime Thoigiantao { get => thoigiantao; set => thoigiantao = value; }
+
+        public int CompareTo(Object obj)
+        {
+            HocLieuDTO Hoclieu = (HocLieuDTO)obj;
+            return this.Mahoclieu.CompareTo(Hoclieu.Mahoclieu);
+        }
+
+        public int CompareTo(HocLieuDTO c1, HocLieuComparer.ComparisonType type)
+        {
+            switch (type)
+            {
+                case HocLieuComparer.ComparisonType.mahoclieu:
+                    return this.mahoclieu.CompareTo(c1.mahoclieu);
+            }
+            return 0;
+        }
     }
 }

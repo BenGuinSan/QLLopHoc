@@ -44,7 +44,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(9, 46, 0, 0);
             this.panel1.Size = new System.Drawing.Size(842, 644);
@@ -53,7 +53,7 @@
             // kryptonButton1
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(194, 10);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.SystemColors.Control;
             this.kryptonButton1.OverrideDefault.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -76,15 +76,15 @@
             this.kryptonButton1.TabIndex = 5;
             this.kryptonButton1.Values.Image = global::QLLopHoc.Properties.Resources.refresh;
             this.kryptonButton1.Values.Text = "";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // rightFlowPanel
             // 
             this.rightFlowPanel.BackColor = System.Drawing.Color.White;
-            this.rightFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightFlowPanel.Location = new System.Drawing.Point(234, 46);
-            this.rightFlowPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightFlowPanel.Location = new System.Drawing.Point(234, 11);
+            this.rightFlowPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightFlowPanel.Name = "rightFlowPanel";
-            this.rightFlowPanel.Size = new System.Drawing.Size(608, 598);
+            this.rightFlowPanel.Size = new System.Drawing.Size(608, 633);
             this.rightFlowPanel.TabIndex = 4;
             // 
             // leftFlowPanel
@@ -92,7 +92,7 @@
             this.leftFlowPanel.BackColor = System.Drawing.Color.LightGray;
             this.leftFlowPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftFlowPanel.Location = new System.Drawing.Point(9, 46);
-            this.leftFlowPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftFlowPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftFlowPanel.Name = "leftFlowPanel";
             this.leftFlowPanel.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.leftFlowPanel.Size = new System.Drawing.Size(225, 598);
@@ -116,7 +116,7 @@
             this.ClientSize = new System.Drawing.Size(842, 644);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Todofrm";
             this.Text = "Todo";
             this.Load += new System.EventHandler(this.Todofrm_Load);

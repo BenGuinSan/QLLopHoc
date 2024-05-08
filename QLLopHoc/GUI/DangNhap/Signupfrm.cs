@@ -138,11 +138,11 @@ namespace QLLopHoc.GUI.DangNhap
                             }else
                             {
                                 tkBUS.tao_taikhoan(email, password);
-                                email = "Email";
+                                txt_email.Text = "Email";
                                 txt_email.ForeColor = System.Drawing.Color.Silver;
-                                password = "Mật khẩu";
+                                txt_matkhau.Text = "Mật khẩu";
                                 txt_matkhau.ForeColor = System.Drawing.Color.Silver;
-                                repassword = "Xác nhận mật khẩu";
+                                txt_nhaplaimk.Text = "Xác nhận mật khẩu";
                                 txt_nhaplaimk.ForeColor = System.Drawing.Color.Silver;
 
                                 MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK);
@@ -161,7 +161,7 @@ namespace QLLopHoc.GUI.DangNhap
                     MessageBox.Show("Định dạng email không chính xác", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
+    
         }
     }
 }

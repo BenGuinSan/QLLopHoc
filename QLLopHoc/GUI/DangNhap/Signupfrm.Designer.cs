@@ -45,6 +45,7 @@
             this.btnHideMK2 = new System.Windows.Forms.PictureBox();
             this.btn_qldangnhap = new System.Windows.Forms.Button();
             this.btn_xndangky = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnShowMK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +69,7 @@
             // btnShowMK
             // 
             this.btnShowMK.Image = ((System.Drawing.Image)(resources.GetObject("btnShowMK.Image")));
-            this.btnShowMK.Location = new System.Drawing.Point(376, 306);
+            this.btnShowMK.Location = new System.Drawing.Point(376, 279);
             this.btnShowMK.Name = "btnShowMK";
             this.btnShowMK.Size = new System.Drawing.Size(24, 24);
             this.btnShowMK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -79,7 +80,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(73, 337);
+            this.label2.Location = new System.Drawing.Point(73, 310);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(336, 2);
             this.label2.TabIndex = 21;
@@ -90,7 +91,7 @@
             this.txt_matkhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_matkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_matkhau.ForeColor = System.Drawing.Color.Silver;
-            this.txt_matkhau.Location = new System.Drawing.Point(77, 306);
+            this.txt_matkhau.Location = new System.Drawing.Point(77, 279);
             this.txt_matkhau.Name = "txt_matkhau";
             this.txt_matkhau.Size = new System.Drawing.Size(290, 27);
             this.txt_matkhau.TabIndex = 20;
@@ -101,7 +102,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(24, 305);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 278);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -111,7 +112,7 @@
             // thanhngang
             // 
             this.thanhngang.BackColor = System.Drawing.Color.Black;
-            this.thanhngang.Location = new System.Drawing.Point(72, 271);
+            this.thanhngang.Location = new System.Drawing.Point(72, 244);
             this.thanhngang.Name = "thanhngang";
             this.thanhngang.Size = new System.Drawing.Size(336, 2);
             this.thanhngang.TabIndex = 18;
@@ -122,7 +123,7 @@
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.Silver;
-            this.txt_email.Location = new System.Drawing.Point(75, 235);
+            this.txt_email.Location = new System.Drawing.Point(75, 208);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(331, 27);
             this.txt_email.TabIndex = 17;
@@ -133,7 +134,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 234);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 207);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -143,7 +144,7 @@
             // btnHideMK
             // 
             this.btnHideMK.Image = global::QLLopHoc.Properties.Resources.hide;
-            this.btnHideMK.Location = new System.Drawing.Point(376, 306);
+            this.btnHideMK.Location = new System.Drawing.Point(376, 279);
             this.btnHideMK.Name = "btnHideMK";
             this.btnHideMK.Size = new System.Drawing.Size(24, 24);
             this.btnHideMK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -154,7 +155,7 @@
             // btnShowMK2
             // 
             this.btnShowMK2.Image = ((System.Drawing.Image)(resources.GetObject("btnShowMK2.Image")));
-            this.btnShowMK2.Location = new System.Drawing.Point(376, 378);
+            this.btnShowMK2.Location = new System.Drawing.Point(376, 351);
             this.btnShowMK2.Name = "btnShowMK2";
             this.btnShowMK2.Size = new System.Drawing.Size(24, 24);
             this.btnShowMK2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -165,7 +166,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(73, 409);
+            this.label3.Location = new System.Drawing.Point(73, 382);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(336, 2);
             this.label3.TabIndex = 26;
@@ -176,7 +177,7 @@
             this.txt_nhaplaimk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nhaplaimk.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nhaplaimk.ForeColor = System.Drawing.Color.Silver;
-            this.txt_nhaplaimk.Location = new System.Drawing.Point(77, 378);
+            this.txt_nhaplaimk.Location = new System.Drawing.Point(77, 351);
             this.txt_nhaplaimk.Name = "txt_nhaplaimk";
             this.txt_nhaplaimk.Size = new System.Drawing.Size(290, 27);
             this.txt_nhaplaimk.TabIndex = 25;
@@ -187,7 +188,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(24, 377);
+            this.pictureBox4.Location = new System.Drawing.Point(24, 350);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -197,7 +198,7 @@
             // btnHideMK2
             // 
             this.btnHideMK2.Image = global::QLLopHoc.Properties.Resources.hide;
-            this.btnHideMK2.Location = new System.Drawing.Point(376, 378);
+            this.btnHideMK2.Location = new System.Drawing.Point(376, 351);
             this.btnHideMK2.Name = "btnHideMK2";
             this.btnHideMK2.Size = new System.Drawing.Size(24, 24);
             this.btnHideMK2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -231,11 +232,25 @@
             this.btn_xndangky.UseVisualStyleBackColor = false;
             this.btn_xndangky.Click += new System.EventHandler(this.btn_xndangky_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(14, 405);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(411, 17);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Mật khâu phải có ít nhất 8 kí tự bao gồm chữ cái, số và kí tự đặc biệt";
+            // 
             // Signupfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(432, 573);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_qldangnhap);
             this.Controls.Add(this.btn_xndangky);
             this.Controls.Add(this.label3);
@@ -286,5 +301,6 @@
         private System.Windows.Forms.PictureBox btnHideMK2;
         private System.Windows.Forms.Button btn_qldangnhap;
         private System.Windows.Forms.Button btn_xndangky;
+        private System.Windows.Forms.Label label4;
     }
 }

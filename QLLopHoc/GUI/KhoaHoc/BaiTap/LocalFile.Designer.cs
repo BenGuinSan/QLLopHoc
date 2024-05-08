@@ -57,6 +57,7 @@
             this.btnLocalFile.StateTracking.Border.Rounding = 10;
             this.btnLocalFile.TabIndex = 2;
             this.btnLocalFile.Values.Text = "";
+            this.btnLocalFile.Click += new System.EventHandler(this.btnLocalFile_Click);
             // 
             // fileName
             // 
@@ -83,7 +84,9 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnRemoveFile.TabIndex = 8;
+            this.btnRemoveFile.Values.Image = global::QLLopHoc.Properties.Resources.icons8_trash_20;
             this.btnRemoveFile.Values.Text = "";
+            this.btnRemoveFile.Click += new System.EventHandler(this.btnRemoveFile_Click);
             // 
             // icon
             // 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLLopHoc.DTO
 {
-    public class DeKiemTra : IComparable
+    public class DeKiemTraDTO : IComparable
     {
         private string madekiemtra;
         private string tieude;
@@ -19,9 +19,9 @@ namespace QLLopHoc.DTO
         private string machuong;
         private int daxoa;
 
-        public DeKiemTra() { }
+        public DeKiemTraDTO() { }
 
-        public DeKiemTra(string madekiemtra, string tieude, DateTime thoigiantao, DateTime thoigianbatdau, DateTime thoigianketthuc, int hinhphat, int xemdapan, int troncauhoi, string machuong, int daxoa)
+        public DeKiemTraDTO(string madekiemtra, string tieude, DateTime thoigiantao, DateTime thoigianbatdau, DateTime thoigianketthuc, int hinhphat, int xemdapan, int troncauhoi, string machuong, int daxoa)
         {
             this.madekiemtra = madekiemtra;
             this.tieude = tieude;
@@ -48,7 +48,7 @@ namespace QLLopHoc.DTO
 
         public int CompareTo(Object obj)
         {
-            DeKiemTra chuong = (DeKiemTra)obj;
+            DeKiemTraDTO chuong = (DeKiemTraDTO)obj;
             return this.machuong.CompareTo(chuong.machuong);
         }
         /*public int CompareTo(DeKiemTra c1, DekiemtraComparer.ComparisonType type)

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class BaiTap : IComparable
+    public class BaiTapDTO : IComparable
     {
         private string mabaitap;
         private string machuong;
@@ -19,7 +20,7 @@ namespace QLLopHoc.DTO
         private int daxoa;
         private int congkhaidapan;
         private int nopbu;
-        public BaiTap(string mabaitap = null, string machuong = null, string tieude = null, string noidungbaitap = null, string noidungdapan = null, DateTime thoigiantao = default, DateTime thoigianbatdau = default, DateTime thoigianketthuc = default, int daxoa = 0, int congkhaidapan = 0, int nopbu = 0)
+        public BaiTapDTO(string mabaitap = null, string machuong = null, string tieude = null, string noidungbaitap = null, string noidungdapan = null, DateTime thoigiantao = default, DateTime thoigianbatdau = default, DateTime thoigianketthuc = default, int daxoa = 0, int congkhaidapan = 0, int nopbu = 0)
         {
             this.Mabaitap = mabaitap;
             this.Machuong = machuong;
@@ -46,17 +47,13 @@ namespace QLLopHoc.DTO
         public int Congkhaidapan { get => congkhaidapan; set => congkhaidapan = value; }
         public int Nopbu { get => nopbu; set => nopbu = value; }
 
-        public int CompareTo(object obj)
+        public int CompareTo(Object obj)
         {
-            throw new NotImplementedException();
-        }
-
-        /*public int CompareTo(Object obj)
-        {
-            BaiTap BaiTap = (BaiTap)obj;
+            BaiTapDTO BaiTap = (BaiTapDTO)obj;
             return this.Mabaitap.CompareTo(BaiTap.Mabaitap);
         }
-        public int CompareTo(BaiTap c1, BaiTapComparer.ComparisonType type)
+
+        public int CompareTo(BaiTapDTO c1, BaiTapComparer.ComparisonType type)
         {
             switch (type)
             {
@@ -64,7 +61,7 @@ namespace QLLopHoc.DTO
                     return this.Mabaitap.CompareTo(c1.Mabaitap);
             }
             return 0;
-        }*/
+        }
         public override string ToString()
         {
             return $"Mabaitap: {Mabaitap}, Machuong: {Machuong}, Tieude: {Tieude}, " +

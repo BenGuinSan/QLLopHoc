@@ -136,18 +136,7 @@ namespace QLLopHoc.GUI.Admin
         {
             Environment.Exit(0);
         }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if(WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            } else
-            {
-                WindowState = FormWindowState.Normal;
-            }
-        }
-
+     
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;

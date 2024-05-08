@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.lblDeadline);
             this.panel1.Controls.Add(this.lblTypeclass);
             this.panel1.Location = new System.Drawing.Point(88, 40);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 25);
             this.panel1.TabIndex = 10;
@@ -73,7 +73,7 @@
             // btnDoHomework
             // 
             this.btnDoHomework.Location = new System.Drawing.Point(390, 15);
-            this.btnDoHomework.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDoHomework.Margin = new System.Windows.Forms.Padding(2);
             this.btnDoHomework.Name = "btnDoHomework";
             this.btnDoHomework.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnDoHomework.Size = new System.Drawing.Size(102, 37);
@@ -87,6 +87,7 @@
             this.btnDoHomework.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoHomework.TabIndex = 12;
             this.btnDoHomework.Values.Text = "";
+            this.btnDoHomework.Click += new System.EventHandler(this.btnDoHomework_Click);
             // 
             // pictureBoxHomework
             // 
@@ -94,7 +95,7 @@
             this.pictureBoxHomework.Image = global::QLLopHoc.Properties.Resources.homework;
             this.pictureBoxHomework.InitialImage = null;
             this.pictureBoxHomework.Location = new System.Drawing.Point(20, 10);
-            this.pictureBoxHomework.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxHomework.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxHomework.Name = "pictureBoxHomework";
             this.pictureBoxHomework.Size = new System.Drawing.Size(51, 48);
             this.pictureBoxHomework.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +152,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBoxHomework);
             this.Controls.Add(this.btnTask);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TaskHomeWork";
             this.Size = new System.Drawing.Size(507, 65);
             this.panel1.ResumeLayout(false);

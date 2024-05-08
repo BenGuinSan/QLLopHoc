@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class BaiLamBaiTap /*: IComparable*/
+    public class BaiLamBaiTapDTO /*: IComparable*/
     {
         private string mabailam;
         private string mataikhoan;
@@ -17,9 +18,9 @@ namespace QLLopHoc.DTO
         private string nhanxet;
         private int noptre;
 
-        public BaiLamBaiTap() { }
+        public BaiLamBaiTapDTO() { }
 
-        public BaiLamBaiTap(string mabailam, string noidung, DateTime thoigiannopbai, float diem, string nhanxet, string mataikhoan, string mabaitap, int noptre)
+        public BaiLamBaiTapDTO(string mabailam, string noidung, DateTime thoigiannopbai, float diem, string nhanxet, string mataikhoan, string mabaitap, int noptre)
         {
             this.Mabailam = mabailam;
             this.Noidung = noidung;
@@ -40,22 +41,22 @@ namespace QLLopHoc.DTO
         public string Mabaitap { get => mabaitap; set => mabaitap = value; }
         public int Noptre { get => noptre; set => noptre = value; }
 
-        /*public int CompareTo(object obj)
+        public int CompareTo(object obj)
         {
             return mabailam.CompareTo(obj);
         }
-        public int CompareTo(BaiLamBaiTap c1, BailambaitapComparer.ComparisonType type)
+        public int CompareTo(BaiLamBaiTapDTO c1, BaiLamBaiTapComparer.ComparisonType type)
         {
             switch (type)
             {
-                case BailambaitapComparer.ComparisonType.mabailam:
+                case BaiLamBaiTapComparer.ComparisonType.mabailam:
                     return this.mabailam.CompareTo(c1.mabailam);
-                case BailambaitapComparer.ComparisonType.mabaitap:
+                case BaiLamBaiTapComparer.ComparisonType.mabaitap:
                     return this.mabaitap.CompareTo(c1.mabaitap);
-                case BailambaitapComparer.ComparisonType.mataikhoan:
+                case BaiLamBaiTapComparer.ComparisonType.mataikhoan:
                     return this.mataikhoan.CompareTo(c1.mataikhoan);
             }
             return 0;
-        }*/
+        }
     }
 }

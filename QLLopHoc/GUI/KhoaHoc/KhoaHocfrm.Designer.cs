@@ -1,4 +1,7 @@
-﻿namespace QLLopHoc.GUI.KhoaHoc
+﻿using ComponentFactory.Krypton.Toolkit;
+using System.Windows.Forms;
+
+namespace QLLopHoc.GUI.KhoaHoc
 {
     partial class KhoaHocfrm
     {
@@ -49,9 +52,10 @@
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.btnTaoMuc);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Location = new System.Drawing.Point(8, 7);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(8);
+            this.panel1.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel1.Size = new System.Drawing.Size(699, 70);
             this.panel1.TabIndex = 1;
             // 
@@ -74,7 +78,7 @@
             this.btnTaiLai.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnTaiLai.Size = new System.Drawing.Size(40, 40);
+            this.btnTaiLai.Size = new System.Drawing.Size(40, 39);
             this.btnTaiLai.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTaiLai.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTaiLai.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiLai.StateCommon.Back.Image")));
@@ -104,6 +108,7 @@
             this.btnTaiLai.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTaiLai.TabIndex = 7;
             this.btnTaiLai.Values.Text = "";
+            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
             // btnTimKiem
             // 
@@ -124,7 +129,7 @@
             this.btnTimKiem.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnTimKiem.Size = new System.Drawing.Size(40, 40);
+            this.btnTimKiem.Size = new System.Drawing.Size(40, 39);
             this.btnTimKiem.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTimKiem.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTimKiem.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.StateCommon.Back.Image")));
@@ -170,8 +175,9 @@
             "Học liệu"});
             this.cbLoaiHoatDong.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.cbLoaiHoatDong.Location = new System.Drawing.Point(8, 21);
+            this.cbLoaiHoatDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLoaiHoatDong.Name = "cbLoaiHoatDong";
-            this.cbLoaiHoatDong.Size = new System.Drawing.Size(126, 28);
+            this.cbLoaiHoatDong.Size = new System.Drawing.Size(125, 28);
             this.cbLoaiHoatDong.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
             this.cbLoaiHoatDong.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Black;
             this.cbLoaiHoatDong.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -197,6 +203,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(140, 18);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(320, 34);
             this.txtTimKiem.StateActive.Border.Color1 = System.Drawing.Color.Black;
@@ -213,12 +220,14 @@
             this.txtTimKiem.StateCommon.Content.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTimKiem.TabIndex = 3;
             this.txtTimKiem.Text = "Tìm kiếm theo tiêu đề hoạt động";
+            this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
+            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
             // btnTaoMuc
             // 
             this.btnTaoMuc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTaoMuc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTaoMuc.Location = new System.Drawing.Point(571, 8);
+            this.btnTaoMuc.Location = new System.Drawing.Point(571, 7);
             this.btnTaoMuc.Margin = new System.Windows.Forms.Padding(0);
             this.btnTaoMuc.Name = "btnTaoMuc";
             this.btnTaoMuc.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
@@ -234,7 +243,7 @@
             this.btnTaoMuc.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnTaoMuc.Size = new System.Drawing.Size(120, 54);
+            this.btnTaoMuc.Size = new System.Drawing.Size(120, 56);
             this.btnTaoMuc.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTaoMuc.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTaoMuc.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
@@ -260,15 +269,17 @@
             this.btnTaoMuc.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTaoMuc.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnTaoMuc.TabIndex = 1;
-            this.btnTaoMuc.Values.Text = "Tạo Mục";
+            this.btnTaoMuc.Values.Text = "Tạo chương";
+            this.btnTaoMuc.Click += new System.EventHandler(this.btnTaoMuc_Click);
             // 
             // pnlChuongContainer
             // 
             this.pnlChuongContainer.AutoScroll = true;
             this.pnlChuongContainer.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.pnlChuongContainer.Location = new System.Drawing.Point(0, 84);
+            this.pnlChuongContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlChuongContainer.Name = "pnlChuongContainer";
-            this.pnlChuongContainer.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.pnlChuongContainer.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.pnlChuongContainer.Size = new System.Drawing.Size(715, 619);
             this.pnlChuongContainer.TabIndex = 2;
             this.pnlChuongContainer.WrapContents = false;
@@ -283,7 +294,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "KhoaHocfrm";
-            this.Padding = new System.Windows.Forms.Padding(8);
+            this.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Text = "KhoaHocfrm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -301,5 +312,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTimKiem;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTaoMuc;
         private System.Windows.Forms.FlowLayoutPanel pnlChuongContainer;
+
+        public FlowLayoutPanel PnlChuongContainer { get => pnlChuongContainer; set => pnlChuongContainer = value; }
+        public KryptonButton BtnTaoChuong { get => BtnTaoChuong; set => BtnTaoChuong = value; }
     }
 }

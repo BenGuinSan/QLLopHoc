@@ -16,5 +16,10 @@ namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
         {
             InitializeComponent();
         }
+        public EmptyPanelKT(string title)
+        {
+            InitializeComponent();
+            this.title.Text = title;
+        }
     }
 }

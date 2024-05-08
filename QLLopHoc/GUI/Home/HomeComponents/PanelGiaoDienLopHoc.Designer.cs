@@ -1,4 +1,7 @@
-﻿namespace QLLopHoc.GUI.Home.HomeComponents
+﻿using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
+
+namespace QLLopHoc.GUI.Home.HomeComponents
 {
     partial class PanelGiaoDienLopHoc
     {
@@ -331,5 +334,9 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnKhoaHoc;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnChat;
         private System.Windows.Forms.Panel pnlHomeContainer;
+
+        public KryptonLabel LblTenLop { get => lblTenLop; set => lblTenLop = value; }
+        public KryptonButton BtnChinhSuaLopHoc { get => btnChinhSuaLopHoc; set => btnChinhSuaLopHoc = value; }
+        public Panel PnlHomeContainer { get => pnlHomeContainer; set => pnlHomeContainer = value; }
     }
 }

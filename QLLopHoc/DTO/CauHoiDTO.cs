@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class CauHoi : IComparable
+    public class CauHoiDTO : IComparable
     {
         private string macauhoi;
         private string mataikhoan;
         private string noidung;
         private int daxoa;
 
-        public CauHoi() { }
+        public CauHoiDTO() { }
 
-        public CauHoi(string macauhoi, string noidung, string mataikhoan, int daxoa)
+        public CauHoiDTO(string macauhoi, string noidung, string mataikhoan, int daxoa)
         {
             this.macauhoi = macauhoi;
             this.noidung = noidung;
@@ -30,24 +31,19 @@ namespace QLLopHoc.DTO
 
         public int CompareTo(object obj)
         {
-            throw new NotImplementedException();
-        }
-
-        /*public int CompareTo(object obj)
-        {
-            CauHoi ch = (CauHoi)obj;
+            CauHoiDTO ch = (CauHoiDTO)obj;
             return this.macauhoi.CompareTo(ch.macauhoi);
         }
-        public int CompareTo(CauHoi c1, CauhoiComparer.ComparisonType type)
+        public int CompareTo(CauHoiDTO c1, CauHoiComparer.ComparisonType type)
         {
             switch (type)
             {
-                case CauhoiComparer.ComparisonType.macauhoi:
+                case CauHoiComparer.ComparisonType.macauhoi:
                     return this.macauhoi.CompareTo(c1.macauhoi);
-                case CauhoiComparer.ComparisonType.mataikhoan:
+                case CauHoiComparer.ComparisonType.mataikhoan:
                     return this.mataikhoan.CompareTo(c1.mataikhoan);
             }
             return 0;
-        }*/
+        }
     }
 }

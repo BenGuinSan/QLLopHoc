@@ -77,14 +77,15 @@
             this.text_tentailieu.StateCommon.Border.Rounding = 5;
             this.text_tentailieu.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.text_tentailieu.TabIndex = 50;
+            this.text_tentailieu.TextChanged += new System.EventHandler(this.text_tentailieu_TextChanged);
             // 
             // lab_demkitu_tentailieu
             // 
             this.lab_demkitu_tentailieu.AutoSize = true;
-            this.lab_demkitu_tentailieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_demkitu_tentailieu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_demkitu_tentailieu.Location = new System.Drawing.Point(639, 9);
             this.lab_demkitu_tentailieu.Name = "lab_demkitu_tentailieu";
-            this.lab_demkitu_tentailieu.Size = new System.Drawing.Size(87, 20);
+            this.lab_demkitu_tentailieu.Size = new System.Drawing.Size(80, 19);
             this.lab_demkitu_tentailieu.TabIndex = 51;
             this.lab_demkitu_tentailieu.Text = "0/50 kí tự";
             // 
@@ -115,14 +116,15 @@
             this.text_noidungtailieu.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.text_noidungtailieu.TabIndex = 53;
             this.text_noidungtailieu.Text = "";
+            this.text_noidungtailieu.TextChanged += new System.EventHandler(this.text_noidungtailieu_TextChanged);
             // 
             // lab_demkitu_noidungtailieu
             // 
             this.lab_demkitu_noidungtailieu.AutoSize = true;
-            this.lab_demkitu_noidungtailieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_demkitu_noidungtailieu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_demkitu_noidungtailieu.Location = new System.Drawing.Point(629, 86);
             this.lab_demkitu_noidungtailieu.Name = "lab_demkitu_noidungtailieu";
-            this.lab_demkitu_noidungtailieu.Size = new System.Drawing.Size(97, 20);
+            this.lab_demkitu_noidungtailieu.Size = new System.Drawing.Size(89, 19);
             this.lab_demkitu_noidungtailieu.TabIndex = 54;
             this.lab_demkitu_noidungtailieu.Text = "0/300 kí tự";
             // 
@@ -173,6 +175,7 @@
             this.but_layfile.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.but_layfile.TabIndex = 55;
             this.but_layfile.Values.Text = "Đính kèm file";
+            this.but_layfile.Click += new System.EventHandler(this.but_layfile_Click);
             // 
             // panel_luufile
             // 
@@ -320,6 +323,7 @@
             this.but_taotailieu.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.but_taotailieu.TabIndex = 59;
             this.but_taotailieu.Values.Text = "Đăng";
+            this.but_taotailieu.Click += new System.EventHandler(this.but_taotailieu_Click);
             // 
             // TaoTaiLieufrm
             // 
@@ -340,6 +344,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "TaoTaiLieufrm";
             this.Text = "Tạo tài liệu ";
+            this.Load += new System.EventHandler(this.TaoTaiLieufrm_Load);
+            this.Shown += new System.EventHandler(this.TaoTaiLieufrm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

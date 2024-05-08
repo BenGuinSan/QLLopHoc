@@ -68,6 +68,7 @@
             this.lblPlaceholderTitle.TabIndex = 10;
             this.lblPlaceholderTitle.Tag = "ádasd";
             this.lblPlaceholderTitle.Text = "Tiêu đề bài tập";
+            this.lblPlaceholderTitle.Click += new System.EventHandler(this.lblPlaceholderTitle_Click);
             // 
             // lblCharCountTitle
             // 
@@ -84,9 +85,10 @@
             // txtTitle
             // 
             this.txtTitle.Location = new System.Drawing.Point(12, 34);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTitle.MaxLength = 200;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(673, 51);
+            this.txtTitle.Size = new System.Drawing.Size(673, 50);
             this.txtTitle.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtTitle.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -96,6 +98,7 @@
             this.txtTitle.StateCommon.Content.Padding = new System.Windows.Forms.Padding(20, 8, -1, -1);
             this.txtTitle.TabIndex = 9;
             this.txtTitle.Text = "";
+            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // lblPlaceholderContent
             // 
@@ -109,6 +112,7 @@
             this.lblPlaceholderContent.Size = new System.Drawing.Size(156, 22);
             this.lblPlaceholderContent.TabIndex = 15;
             this.lblPlaceholderContent.Text = "Nội dung bài tập...";
+            this.lblPlaceholderContent.Click += new System.EventHandler(this.lblPlaceholderContent_Click);
             // 
             // lblCharCountContent
             // 
@@ -117,7 +121,7 @@
             this.lblCharCountContent.ForeColor = System.Drawing.Color.Gray;
             this.lblCharCountContent.Location = new System.Drawing.Point(615, 114);
             this.lblCharCountContent.Name = "lblCharCountContent";
-            this.lblCharCountContent.Size = new System.Drawing.Size(70, 18);
+            this.lblCharCountContent.Size = new System.Drawing.Size(69, 18);
             this.lblCharCountContent.TabIndex = 14;
             this.lblCharCountContent.Text = "0/4000";
             this.lblCharCountContent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -125,9 +129,10 @@
             // txtContent
             // 
             this.txtContent.Location = new System.Drawing.Point(12, 135);
+            this.txtContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContent.MaxLength = 4000;
             this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(673, 323);
+            this.txtContent.Size = new System.Drawing.Size(673, 322);
             this.txtContent.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtContent.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -137,12 +142,14 @@
             this.txtContent.StateCommon.Content.Padding = new System.Windows.Forms.Padding(20, 8, -1, -1);
             this.txtContent.TabIndex = 16;
             this.txtContent.Text = "";
+            this.txtContent.TextChanged += new System.EventHandler(this.txtContent_TextChanged);
             // 
             // addAnswer
             // 
             this.addAnswer.Location = new System.Drawing.Point(537, 464);
+            this.addAnswer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addAnswer.Name = "addAnswer";
-            this.addAnswer.Size = new System.Drawing.Size(148, 29);
+            this.addAnswer.Size = new System.Drawing.Size(148, 30);
             this.addAnswer.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.addAnswer.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.addAnswer.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
@@ -150,12 +157,14 @@
             this.addAnswer.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addAnswer.TabIndex = 20;
             this.addAnswer.Values.Text = "Thêm đáp án";
+            this.addAnswer.Click += new System.EventHandler(this.addAnswer_Click);
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(154, 464);
+            this.btnUpload.Location = new System.Drawing.Point(159, 464);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(33, 29);
+            this.btnUpload.Size = new System.Drawing.Size(33, 30);
             this.btnUpload.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnUpload.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btnUpload.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
@@ -163,6 +172,7 @@
             this.btnUpload.TabIndex = 19;
             this.btnUpload.Values.Image = global::QLLopHoc.Properties.Resources.upload_16;
             this.btnUpload.Values.Text = "";
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // label3
             // 
@@ -178,7 +188,8 @@
             // 
             this.flowFilePanel.AutoScroll = true;
             this.flowFilePanel.BackColor = System.Drawing.Color.White;
-            this.flowFilePanel.Location = new System.Drawing.Point(12, 499);
+            this.flowFilePanel.Location = new System.Drawing.Point(12, 498);
+            this.flowFilePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowFilePanel.Name = "flowFilePanel";
             this.flowFilePanel.Size = new System.Drawing.Size(673, 142);
             this.flowFilePanel.TabIndex = 17;
@@ -186,6 +197,7 @@
             // createHomework
             // 
             this.createHomework.Location = new System.Drawing.Point(704, 603);
+            this.createHomework.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createHomework.Name = "createHomework";
             this.createHomework.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.createHomework.OverrideDefault.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -196,7 +208,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.createHomework.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.createHomework.OverrideDefault.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.createHomework.Size = new System.Drawing.Size(266, 38);
+            this.createHomework.Size = new System.Drawing.Size(267, 38);
             this.createHomework.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.createHomework.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.createHomework.StateCommon.Border.Color1 = System.Drawing.Color.White;
@@ -217,6 +229,7 @@
             this.createHomework.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.createHomework.TabIndex = 22;
             this.createHomework.Values.Text = "Tạo bài tập";
+            this.createHomework.Click += new System.EventHandler(this.createHomework_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -234,8 +247,9 @@
             this.flowLayoutPanel2.Controls.Add(this.dtpThoiGianKetThuc);
             this.flowLayoutPanel2.Controls.Add(this.cbkLateSubmit);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(704, 34);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 563);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(267, 562);
             this.flowLayoutPanel2.TabIndex = 23;
             // 
             // label1
@@ -263,17 +277,17 @@
             // lblClass
             // 
             this.lblClass.AutoEllipsis = true;
-            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.Location = new System.Drawing.Point(3, 76);
             this.lblClass.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(263, 24);
+            this.lblClass.Size = new System.Drawing.Size(263, 25);
             this.lblClass.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 110);
+            this.label6.Location = new System.Drawing.Point(3, 111);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(263, 23);
@@ -283,17 +297,17 @@
             // lblChuong
             // 
             this.lblChuong.AutoEllipsis = true;
-            this.lblChuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChuong.Location = new System.Drawing.Point(3, 143);
+            this.lblChuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChuong.Location = new System.Drawing.Point(3, 144);
             this.lblChuong.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblChuong.Name = "lblChuong";
-            this.lblChuong.Size = new System.Drawing.Size(263, 24);
+            this.lblChuong.Size = new System.Drawing.Size(263, 25);
             this.lblChuong.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 177);
+            this.label8.Location = new System.Drawing.Point(3, 179);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(263, 23);
@@ -303,17 +317,17 @@
             // lblTeacher
             // 
             this.lblTeacher.AutoEllipsis = true;
-            this.lblTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTeacher.Location = new System.Drawing.Point(3, 210);
+            this.lblTeacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeacher.Location = new System.Drawing.Point(3, 212);
             this.lblTeacher.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.lblTeacher.Name = "lblTeacher";
-            this.lblTeacher.Size = new System.Drawing.Size(263, 24);
+            this.lblTeacher.Size = new System.Drawing.Size(263, 25);
             this.lblTeacher.TabIndex = 5;
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 244);
+            this.label12.Location = new System.Drawing.Point(3, 247);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(263, 23);
@@ -324,8 +338,8 @@
             // 
             this.dtpThoiGianBatDau.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtpThoiGianBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpThoiGianBatDau.Location = new System.Drawing.Point(3, 280);
-            this.dtpThoiGianBatDau.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.dtpThoiGianBatDau.Location = new System.Drawing.Point(3, 282);
+            this.dtpThoiGianBatDau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 10);
             this.dtpThoiGianBatDau.MinDate = new System.DateTime(2023, 11, 23, 0, 0, 0, 0);
             this.dtpThoiGianBatDau.Name = "dtpThoiGianBatDau";
             this.dtpThoiGianBatDau.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Black;
@@ -338,11 +352,12 @@
             this.dtpThoiGianBatDau.StateCommon.Border.Rounding = 5;
             this.dtpThoiGianBatDau.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpThoiGianBatDau.TabIndex = 12;
+            this.dtpThoiGianBatDau.ValueChanged += new System.EventHandler(this.dtpThoiGianBatDau_ValueChanged);
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 324);
+            this.label14.Location = new System.Drawing.Point(3, 326);
             this.label14.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(320, 23);
@@ -353,8 +368,8 @@
             // 
             this.dtpThoiGianKetThuc.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtpThoiGianKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpThoiGianKetThuc.Location = new System.Drawing.Point(3, 360);
-            this.dtpThoiGianKetThuc.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.dtpThoiGianKetThuc.Location = new System.Drawing.Point(3, 361);
+            this.dtpThoiGianKetThuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 20);
             this.dtpThoiGianKetThuc.MinDate = this.dtpThoiGianBatDau.Value;
             this.dtpThoiGianKetThuc.Name = "dtpThoiGianKetThuc";
             this.dtpThoiGianKetThuc.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Black;
@@ -368,12 +383,14 @@
             this.dtpThoiGianKetThuc.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpThoiGianKetThuc.TabIndex = 13;
             this.dtpThoiGianKetThuc.ValueNullable = new System.DateTime(2024, 11, 23, 10, 35, 0, 0);
+            this.dtpThoiGianKetThuc.ValueChanged += new System.EventHandler(this.dtpThoiGianKetThuc_ValueChanged);
             // 
             // cbkLateSubmit
             // 
             this.cbkLateSubmit.AutoSize = true;
             this.cbkLateSubmit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbkLateSubmit.Location = new System.Drawing.Point(3, 417);
+            this.cbkLateSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbkLateSubmit.Name = "cbkLateSubmit";
             this.cbkLateSubmit.Size = new System.Drawing.Size(171, 27);
             this.cbkLateSubmit.TabIndex = 15;
@@ -384,7 +401,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 653);
+            this.ClientSize = new System.Drawing.Size(981, 654);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.createHomework);
             this.Controls.Add(this.addAnswer);
@@ -398,8 +415,10 @@
             this.Controls.Add(this.lblCharCountTitle);
             this.Controls.Add(this.txtTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TaoBaiTapfrm";
             this.Text = "Tạo bài tập";
+            this.Load += new System.EventHandler(this.TaoBaiTapfrm_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);

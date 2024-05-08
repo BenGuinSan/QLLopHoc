@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtContent = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.flowFilePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblCharCount = new System.Windows.Forms.Label();
+            this.btnMark = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             this.lblTitle.MaximumSize = new System.Drawing.Size(1298, 48);
             this.lblTitle.MinimumSize = new System.Drawing.Size(0, 48);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(958, 48);
+            this.lblTitle.Size = new System.Drawing.Size(801, 48);
             this.lblTitle.TabIndex = 27;
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -70,6 +72,7 @@
             this.lblPlaceholder.Size = new System.Drawing.Size(228, 22);
             this.lblPlaceholder.TabIndex = 42;
             this.lblPlaceholder.Text = "Viết nhận xét cho bài làm....";
+            this.lblPlaceholder.Click += new System.EventHandler(this.lblPlaceholder_Click);
             // 
             // label5
             // 
@@ -108,6 +111,8 @@
             this.score.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, 30, -1, -1);
             this.score.TabIndex = 39;
             this.score.Text = "";
+            this.score.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.score_KeyPress);
+            this.score.KeyUp += new System.Windows.Forms.KeyEventHandler(this.score_KeyUp);
             // 
             // panel1
             // 
@@ -188,6 +193,7 @@
             this.teacherComment.TabIndex = 37;
             this.teacherComment.Tag = "";
             this.teacherComment.Text = "";
+            this.teacherComment.TextChanged += new System.EventHandler(this.teacherComment_TextChanged);
             // 
             // label2
             // 
@@ -226,11 +232,52 @@
             this.flowFilePanel.Size = new System.Drawing.Size(958, 65);
             this.flowFilePanel.TabIndex = 45;
             // 
+            // lblCharCount
+            // 
+            this.lblCharCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCharCount.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCharCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCharCount.ForeColor = System.Drawing.Color.Gray;
+            this.lblCharCount.Location = new System.Drawing.Point(827, 59);
+            this.lblCharCount.Name = "lblCharCount";
+            this.lblCharCount.Size = new System.Drawing.Size(124, 23);
+            this.lblCharCount.TabIndex = 46;
+            this.lblCharCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnMark
+            // 
+            this.btnMark.Location = new System.Drawing.Point(819, 9);
+            this.btnMark.Name = "btnMark";
+            this.btnMark.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
+            this.btnMark.OverrideDefault.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnMark.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnMark.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btnMark.Size = new System.Drawing.Size(151, 45);
+            this.btnMark.StateCommon.Back.Color1 = System.Drawing.SystemColors.Control;
+            this.btnMark.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnMark.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
+            this.btnMark.StateCommon.Border.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnMark.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnMark.StateCommon.Border.Rounding = 5;
+            this.btnMark.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
+            this.btnMark.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnMark.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMark.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
+            this.btnMark.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnMark.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btnMark.TabIndex = 47;
+            this.btnMark.Values.Text = "Hoàn thành";
+            this.btnMark.Click += new System.EventHandler(this.btnMark_Click);
+            // 
             // ChamDiemfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.btnMark);
+            this.Controls.Add(this.lblCharCount);
             this.Controls.Add(this.flowFilePanel);
             this.Controls.Add(this.txtContent);
             this.Controls.Add(this.label2);
@@ -244,6 +291,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ChamDiemfrm";
             this.Text = "Chấm điểm bài tập";
+            this.Load += new System.EventHandler(this.ChamDiemfrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -268,5 +316,7 @@
         private System.Windows.Forms.Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox txtContent;
         private System.Windows.Forms.FlowLayoutPanel flowFilePanel;
+        private System.Windows.Forms.Label lblCharCount;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnMark;
     }
 }

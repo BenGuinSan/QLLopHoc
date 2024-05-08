@@ -43,7 +43,21 @@ namespace QLLopHoc.BUS
             else
                 return false;
         }
-
+        public bool XoaThamGia(ThamGiaDTO thamgia)
+        {
+            if (thamgiaDAO.XoaThamGia(thamgia))
+            {
+                foreach (ThamGiaDTO tg in this.list)
+                {
+                    if (tg.Mataikhoan.Equals(thamgia.Mataikhoan) && tg.Malop.Equals(thamgia.Malop))
+                    {
+                        this.list.Remove(tg);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         public bool KtraDaThamGia(ThamGiaDTO thamgia)
         {
             foreach (ThamGiaDTO tg in this.list)
@@ -52,6 +66,39 @@ namespace QLLopHoc.BUS
                     return true;
             }
             return false;
+        }
+
+        public DataTable DanhSachHocSinhTheoMaLop(string malop)
+        {
+            return thamgiaDAO.DanhSachHocSinhTheoMaLop(malop);
+        }
+        public ArrayList getDanhSachLopWithMaLopHoc(string malophoc)
+        {
+            ArrayList listHocSinh = new ArrayList();
+            foreach (ThamGiaDTO hocsinh in list)
+            {
+                if (hocsinh.Malop.Equals(malophoc))
+                    listHocSinh.Add(hocsinh.Mataikhoan);
+            }
+            return listHocSinh;
+        }
+        public DataTable LayAllThamGiaLopHocById(String str)
+        {
+            dt = thamgialophocDAO.LayAllThamGiaById(str);
+            return dt;
+        }
+        public DataTable LayAllThamGiaLopHocByIDLopHoc(String str)
+        {
+            dt = thamgialophocDAO.LayAllThamGiaLopHocByIDLopHoc(str);
+            return dt;
+        }
+        public Boolean RoiKhoiLopHoc(String str, String maLH)
+        {
+            if (thamgialophocDAO.RoiKhoiLopHoc(str, maLH))
+            {
+                return true;
+            }
+            else { return false; }
         }
 
     }

@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ButtonBaiTap));
             this.btnBaitap = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTieuDeBKT = new System.Windows.Forms.Label();
-            this.lblChiTietBKT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblTieuDeBT = new System.Windows.Forms.Label();
+            this.lblChiTietBT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnXoa = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.timerCapNhatTrangThai = new System.Windows.Forms.Timer(this.components);
@@ -45,6 +45,7 @@
             this.btnBaitap.AllowDrop = true;
             this.btnBaitap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBaitap.Location = new System.Drawing.Point(0, 0);
+            this.btnBaitap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBaitap.Name = "btnBaitap";
             this.btnBaitap.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnBaitap.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -53,7 +54,7 @@
             this.btnBaitap.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnBaitap.Size = new System.Drawing.Size(650, 100);
+            this.btnBaitap.Size = new System.Drawing.Size(488, 81);
             this.btnBaitap.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnBaitap.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnBaitap.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -81,40 +82,44 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(28, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTieuDeBKT
+            // lblTieuDeBT
             // 
-            this.lblTieuDeBKT.AutoEllipsis = true;
-            this.lblTieuDeBKT.BackColor = System.Drawing.Color.White;
-            this.lblTieuDeBKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTieuDeBKT.Location = new System.Drawing.Point(93, 20);
-            this.lblTieuDeBKT.Name = "lblTieuDeBKT";
-            this.lblTieuDeBKT.Size = new System.Drawing.Size(400, 28);
-            this.lblTieuDeBKT.TabIndex = 23;
-            this.lblTieuDeBKT.Text = "Lập trình C#";
+            this.lblTieuDeBT.AutoEllipsis = true;
+            this.lblTieuDeBT.BackColor = System.Drawing.Color.White;
+            this.lblTieuDeBT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTieuDeBT.Location = new System.Drawing.Point(70, 16);
+            this.lblTieuDeBT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTieuDeBT.Name = "lblTieuDeBT";
+            this.lblTieuDeBT.Size = new System.Drawing.Size(300, 23);
+            this.lblTieuDeBT.TabIndex = 23;
+            this.lblTieuDeBT.Text = "Lập trình C#";
             // 
-            // lblChiTietBKT
+            // lblChiTietBT
             // 
-            this.lblChiTietBKT.BackColor = System.Drawing.Color.White;
-            this.lblChiTietBKT.Location = new System.Drawing.Point(98, 51);
-            this.lblChiTietBKT.Name = "lblChiTietBKT";
-            this.lblChiTietBKT.Size = new System.Drawing.Size(124, 24);
-            this.lblChiTietBKT.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
-            this.lblChiTietBKT.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblChiTietBKT.TabIndex = 24;
-            this.lblChiTietBKT.Values.Text = "Chi tiết bài tập";
+            this.lblChiTietBT.BackColor = System.Drawing.Color.White;
+            this.lblChiTietBT.Location = new System.Drawing.Point(74, 41);
+            this.lblChiTietBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblChiTietBT.Name = "lblChiTietBT";
+            this.lblChiTietBT.Size = new System.Drawing.Size(84, 17);
+            this.lblChiTietBT.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.lblChiTietBT.StateCommon.ShortText.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblChiTietBT.TabIndex = 24;
+            this.lblChiTietBT.Values.Text = "Chi tiết bài tập";
             // 
             // btnSua
             // 
             this.btnSua.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.Location = new System.Drawing.Point(538, 30);
+            this.btnSua.Location = new System.Drawing.Point(404, 24);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnSua.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -125,7 +130,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnSua.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnSua.Size = new System.Drawing.Size(40, 40);
+            this.btnSua.Size = new System.Drawing.Size(30, 32);
             this.btnSua.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnSua.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnSua.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.StateCommon.Back.Image")));
@@ -171,12 +176,14 @@
             this.btnSua.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnSua.TabIndex = 25;
             this.btnSua.Values.Text = "";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.Location = new System.Drawing.Point(591, 30);
+            this.btnXoa.Location = new System.Drawing.Point(443, 24);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnXoa.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -187,7 +194,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnXoa.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnXoa.Size = new System.Drawing.Size(40, 40);
+            this.btnXoa.Size = new System.Drawing.Size(30, 32);
             this.btnXoa.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnXoa.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnXoa.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.StateCommon.Back.Image")));
@@ -233,19 +240,26 @@
             this.btnXoa.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnXoa.TabIndex = 26;
             this.btnXoa.Values.Text = "";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // timerCapNhatTrangThai
+            // 
+            this.timerCapNhatTrangThai.Tick += new System.EventHandler(this.timerCapNhatTrangThai_Tick);
             // 
             // ButtonBaiTap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.lblChiTietBKT);
-            this.Controls.Add(this.lblTieuDeBKT);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.lblChiTietBT);
+            this.Controls.Add(this.lblTieuDeBT);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBaitap);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ButtonBaiTap";
-            this.Size = new System.Drawing.Size(650, 100);
+            this.Size = new System.Drawing.Size(488, 81);
+            this.Click += new System.EventHandler(this.ButtonBaiTap_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,8 +270,8 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnBaitap;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTieuDeBKT;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblChiTietBKT;
+        private System.Windows.Forms.Label lblTieuDeBT;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblChiTietBT;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSua;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnXoa;
         private System.Windows.Forms.Timer timerCapNhatTrangThai;

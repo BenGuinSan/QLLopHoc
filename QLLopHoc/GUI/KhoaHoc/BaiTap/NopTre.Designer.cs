@@ -32,6 +32,7 @@
             this.avatar = new System.Windows.Forms.PictureBox();
             this.lblState = new System.Windows.Forms.Label();
             this.btnChamDiem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblHoten = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@
             this.btnHocSinh.StateTracking.Border.Rounding = 10;
             this.btnHocSinh.TabIndex = 3;
             this.btnHocSinh.Values.Text = "";
+            this.btnHocSinh.Click += new System.EventHandler(this.btnHocSinh_Click);
             // 
             // avatar
             // 
@@ -127,11 +129,22 @@
             this.btnChamDiem.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(101)))));
             this.btnChamDiem.TabIndex = 22;
             this.btnChamDiem.Values.Text = "Chấm điểm";
+            this.btnChamDiem.Click += new System.EventHandler(this.btnChamDiem_Click);
+            // 
+            // lblHoten
+            // 
+            this.lblHoten.BackColor = System.Drawing.Color.White;
+            this.lblHoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoten.Location = new System.Drawing.Point(156, 3);
+            this.lblHoten.Name = "lblHoten";
+            this.lblHoten.Size = new System.Drawing.Size(430, 24);
+            this.lblHoten.TabIndex = 23;
             // 
             // NopTre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblHoten);
             this.Controls.Add(this.btnChamDiem);
             this.Controls.Add(this.lblState);
             this.Controls.Add(this.avatar);
@@ -149,5 +162,6 @@
         private System.Windows.Forms.PictureBox avatar;
         private System.Windows.Forms.Label lblState;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnChamDiem;
+        private System.Windows.Forms.Label lblHoten;
     }
 }

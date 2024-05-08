@@ -315,6 +315,7 @@
             this.notSubmit.StateTracking.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.notSubmit.TabIndex = 0;
             this.notSubmit.Values.Text = "Chưa nộp";
+            this.notSubmit.Click += new System.EventHandler(this.notSubmit_Click);
             // 
             // submited
             // 
@@ -348,6 +349,7 @@
             this.submited.StateTracking.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.submited.TabIndex = 1;
             this.submited.Values.Text = "Đã nộp";
+            this.submited.Click += new System.EventHandler(this.submited_Click);
             // 
             // kryptonButton1
             // 
@@ -377,6 +379,7 @@
             this.kryptonButton1.TabIndex = 2;
             this.kryptonButton1.Values.Image = global::QLLopHoc.Properties.Resources.refresh;
             this.kryptonButton1.Values.Text = "";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // txtTimKiem
             // 
@@ -397,6 +400,7 @@
             this.txtTimKiem.StateCommon.Border.Rounding = 5;
             this.txtTimKiem.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTimKiem.TabIndex = 24;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // lblTimKiem
             // 
@@ -407,9 +411,10 @@
             this.lblTimKiem.Location = new System.Drawing.Point(381, 117);
             this.lblTimKiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(94, 15);
+            this.lblTimKiem.Size = new System.Drawing.Size(118, 19);
             this.lblTimKiem.TabIndex = 25;
             this.lblTimKiem.Text = "Tìm kiếm học sinh";
+            this.lblTimKiem.Click += new System.EventHandler(this.lblTimKiem_Click);
             // 
             // btnSearch
             // 
@@ -457,6 +462,7 @@
             this.btnSearch.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnSearch.TabIndex = 26;
             this.btnSearch.Values.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // flowpanelHocSinh
             // 

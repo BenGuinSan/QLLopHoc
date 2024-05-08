@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace QLLopHoc.DTO
 {
-    public class ChiTietBaiLamKiemTra
+    public class ChiTietBaiLamKiemTraDTO
     {
         private string mabailamkiemtra;
         private string macauhoi;
         private string dapanchon;
         private int thutu;
 
-        public ChiTietBaiLamKiemTra(string mabailamkiemtra = "", string macauhoi = "", string dapanchon = "", int thutu = 0)
+        public ChiTietBaiLamKiemTraDTO(string mabailamkiemtra = "", string macauhoi = "", string dapanchon = "", int thutu = 0)
         {
             this.mabailamkiemtra = mabailamkiemtra;
             this.macauhoi = macauhoi;
@@ -27,7 +27,7 @@ namespace QLLopHoc.DTO
 
         public int CompareTo(Object obj)
         {
-            ChiTietBaiLamKiemTra ctblkt = (ChiTietBaiLamKiemTra)obj;
+            ChiTietBaiLamKiemTraDTO ctblkt = (ChiTietBaiLamKiemTraDTO)obj;
             return this.thutu.CompareTo(ctblkt.thutu);
         }
     }

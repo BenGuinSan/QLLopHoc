@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class Chuong : IComparable
+    public class ChuongDTO : IComparable
     {
         private string machuong;
         private string malop;
@@ -14,8 +15,8 @@ namespace QLLopHoc.DTO
         private DateTime thoigiantao;
         private int daxoa;
 
-        public Chuong() { }
-        public Chuong(string machuong, string tenchuong, DateTime thoigiantao, string malop, int daxoa)
+        public ChuongDTO() { }
+        public ChuongDTO(string machuong, string tenchuong, DateTime thoigiantao, string malop, int daxoa)
         {
             this.machuong = machuong;
             this.tenchuong = tenchuong;
@@ -32,10 +33,10 @@ namespace QLLopHoc.DTO
 
         public int CompareTo(Object obj)
         {
-            Chuong chuong = (Chuong)obj;
+            ChuongDTO chuong = (ChuongDTO)obj;
             return this.machuong.CompareTo(chuong.machuong);
         }
-        /*public int CompareTo(Chuong c1, ChuongComparer.ComparisonType type)
+        public int CompareTo(ChuongDTO c1, ChuongComparer.ComparisonType type)
         {
             switch (type)
             {
@@ -45,6 +46,6 @@ namespace QLLopHoc.DTO
                     return this.tenchuong.CompareTo(c1.tenchuong);
             }
             return 0;
-        }*/
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
+﻿using ComponentFactory.Krypton.Toolkit;
+using System.Windows.Forms;
+
+namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
 {
     partial class PanelChiTietCauHoi
     {
@@ -224,5 +227,10 @@
         private System.Windows.Forms.Label lblDapAnDung;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnXoaCauHoi;
         private System.Windows.Forms.FlowLayoutPanel pnlChiTietCauHoiContainer;
+        public Label LblNoiDung { get => lblNoiDung; set => lblNoiDung = value; }
+        public KryptonButton BtnXoaCauHoi { get => btnXoaCauHoi; set => btnXoaCauHoi = value; }
+        public Label LblDapAnDung { get => lblDapAnDung; set => lblDapAnDung = value; }
+        public FlowLayoutPanel PnlChiTietCauHoiContainer { get => pnlChiTietCauHoiContainer; set => pnlChiTietCauHoiContainer = value; }
+        public KryptonButton BtnDong { get => btnDong; set => btnDong = value; }
     }
 }

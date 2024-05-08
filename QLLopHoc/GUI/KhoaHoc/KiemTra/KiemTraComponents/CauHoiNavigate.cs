@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
 {
@@ -15,6 +16,10 @@ namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
         public CauHoiNavigate()
         {
             InitializeComponent();
+        }
+        public KryptonButton getButtonNav()
+        {
+            return this.kryptonButton2;
         }
     }
 }

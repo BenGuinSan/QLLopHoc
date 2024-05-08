@@ -233,6 +233,7 @@
             this.MinimumSize = new System.Drawing.Size(1204, 685);
             this.Name = "XemBaiLamHocSinhfrm";
             this.Text = "Bài Làm Đã Nộp";
+            this.Load += new System.EventHandler(this.XemBaiLamHocSinhfrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();

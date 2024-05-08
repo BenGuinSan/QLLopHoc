@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLLopHoc.Comparer;
 
 namespace QLLopHoc.DTO
 {
-    public class CauTraLoi : IComparable
+    public class CauTraLoiDTO : IComparable
     {
         private string macautraloi;
         private string macauhoi;
         private string noidung;
         private int ladapan;
 
-        public CauTraLoi(string macautraloi = "", string noidung = "", int ladapan = 0, string macauhoi = "")
+        public CauTraLoiDTO(string macautraloi = "", string noidung = "", int ladapan = 0, string macauhoi = "")
         {
             this.Macautraloi = macautraloi;
             this.Noidung = noidung;
@@ -26,25 +27,22 @@ namespace QLLopHoc.DTO
         public int Ladapan { get => ladapan; set => ladapan = value; }
         public string Macauhoi { get => macauhoi; set => macauhoi = value; }
 
-        public int CompareTo(object obj)
+        public int CompareTo(Object obj)
         {
-            throw new NotImplementedException();
+             CauTraLoiDTO chuong = (CauTraLoiDTO)obj;
+             return this.macautraloi.CompareTo(chuong.macautraloi);
         }
-        /*public int CompareTo(Object obj)
-{
-   CauTraLoi chuong = (CauTraLoi)obj;
-   return this.macautraloi.CompareTo(chuong.macautraloi);
-}
-public int CompareTo(CauTraLoi c1, CautraloiComparer.ComparisonType type)
-{
-   switch (type)
-   {
-       case CautraloiComparer.ComparisonType.macauhoi:
-           return this.Macauhoi.CompareTo(c1.macauhoi);
-       case CautraloiComparer.ComparisonType.macautraloi:
-           return this.macautraloi.CompareTo(c1.macautraloi);
-   }
-   return 0;
-}*/
+
+        public int CompareTo(CauTraLoiDTO c1, CauTraLoiComparer.ComparisonType type)
+        {
+             switch (type)
+            {
+             case CauTraLoiComparer.ComparisonType.macauhoi:
+                return this.Macauhoi.CompareTo(c1.macauhoi);
+             case CauTraLoiComparer.ComparisonType.macautraloi:
+                return this.macautraloi.CompareTo(c1.macautraloi);
+            }
+            return 0;
+        }
     }
 }

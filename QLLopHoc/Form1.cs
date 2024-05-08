@@ -29,6 +29,7 @@ namespace QLLopHoc
         private BaiLamKiemTraBUS blktBUS;
         private ChuongBUS chuongBUS;
         TaiKhoanBUS taikhoanBUS;
+        ChucnangBUS cn = new ChucnangBUS();
 
         public TaiKhoanDTO Tk { get => tk; set => tk = value; }
 
@@ -43,6 +44,7 @@ namespace QLLopHoc
             taikhoanBUS = new TaiKhoanBUS();
             blbtBUS = new BaiLamBaiTapBUS();
             blktBUS = new BaiLamKiemTraBUS();
+
 
 
 
@@ -98,6 +100,7 @@ namespace QLLopHoc
             //this.btnMinimize.BringToFront();
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
+            cn.loadggdrive();
             f.Show();
         }
 
@@ -124,7 +127,18 @@ namespace QLLopHoc
             }
         }
 
-        
+        public void addFormtoPanelContainer(object Form)
+        {
+            if (this.mainpanel.Controls.Count > 0)
+                this.mainpanel.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainpanel.Controls.Add(f);
+            this.mainpanel.Tag = f;
+            f.Show();
+        }
+
 
         private void sidebar_Paint(object sender, PaintEventArgs e)
         {

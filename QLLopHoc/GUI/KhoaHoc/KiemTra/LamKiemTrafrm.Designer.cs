@@ -240,6 +240,7 @@
             this.btnSubmit.StatePressed.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btnSubmit.TabIndex = 17;
             this.btnSubmit.Values.Text = "Nộp bài kiểm tra ";
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // LamKiemTrafrm
             // 

@@ -1,4 +1,5 @@
-﻿namespace QLLopHoc.GUI.Home.HomeComponents
+﻿using System.Windows.Forms;
+namespace QLLopHoc.GUI.Home.HomeComponents
 {
     partial class ButtonHocLieu
     {
@@ -31,9 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ButtonHocLieu));
             this.btnHocLieu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTieuDeBKT = new System.Windows.Forms.Label();
-            this.lblChiTietBKT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.btnSua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblTieuDeHocLieu = new System.Windows.Forms.Label();
+            this.lblChiTietHocLieu = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnXoa = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +43,7 @@
             this.btnHocLieu.AllowDrop = true;
             this.btnHocLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnHocLieu.Location = new System.Drawing.Point(0, 0);
+            this.btnHocLieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHocLieu.Name = "btnHocLieu";
             this.btnHocLieu.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnHocLieu.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -51,7 +52,7 @@
             this.btnHocLieu.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnHocLieu.Size = new System.Drawing.Size(650, 100);
+            this.btnHocLieu.Size = new System.Drawing.Size(651, 100);
             this.btnHocLieu.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnHocLieu.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnHocLieu.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -72,107 +73,49 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnHocLieu.TabIndex = 16;
             this.btnHocLieu.Values.Text = "";
+            this.btnHocLieu.Click += new System.EventHandler(this.btnHocLieu_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(28, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTieuDeBKT
+            // lblTieuDeHocLieu
             // 
-            this.lblTieuDeBKT.AutoEllipsis = true;
-            this.lblTieuDeBKT.BackColor = System.Drawing.Color.White;
-            this.lblTieuDeBKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTieuDeBKT.Location = new System.Drawing.Point(93, 20);
-            this.lblTieuDeBKT.Name = "lblTieuDeBKT";
-            this.lblTieuDeBKT.Size = new System.Drawing.Size(400, 28);
-            this.lblTieuDeBKT.TabIndex = 24;
-            this.lblTieuDeBKT.Text = "Lập trình C#";
+            this.lblTieuDeHocLieu.AutoEllipsis = true;
+            this.lblTieuDeHocLieu.BackColor = System.Drawing.Color.White;
+            this.lblTieuDeHocLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTieuDeHocLieu.Location = new System.Drawing.Point(93, 20);
+            this.lblTieuDeHocLieu.Name = "lblTieuDeHocLieu";
+            this.lblTieuDeHocLieu.Size = new System.Drawing.Size(400, 28);
+            this.lblTieuDeHocLieu.TabIndex = 24;
+            this.lblTieuDeHocLieu.Text = "Lập trình C#";
             // 
-            // lblChiTietBKT
+            // lblChiTietHocLieu
             // 
-            this.lblChiTietBKT.BackColor = System.Drawing.Color.White;
-            this.lblChiTietBKT.Location = new System.Drawing.Point(98, 51);
-            this.lblChiTietBKT.Name = "lblChiTietBKT";
-            this.lblChiTietBKT.Size = new System.Drawing.Size(132, 24);
-            this.lblChiTietBKT.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
-            this.lblChiTietBKT.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblChiTietBKT.TabIndex = 25;
-            this.lblChiTietBKT.Values.Text = "Chi tiết học liệu";
-            // 
-            // btnSua
-            // 
-            this.btnSua.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.Location = new System.Drawing.Point(538, 30);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.btnSua.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.btnSua.OverrideDefault.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.ExpertTracking;
-            this.btnSua.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(101)))));
-            this.btnSua.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(101)))));
-            this.btnSua.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSua.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnSua.Size = new System.Drawing.Size(40, 40);
-            this.btnSua.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnSua.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnSua.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.StateCommon.Back.Image")));
-            this.btnSua.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.btnSua.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.btnSua.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.btnSua.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.btnSua.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSua.StateCommon.Border.Rounding = 5;
-            this.btnSua.StateCommon.Content.Padding = new System.Windows.Forms.Padding(0);
-            this.btnSua.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnSua.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.btnSua.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSua.StateNormal.Back.Color1 = System.Drawing.Color.White;
-            this.btnSua.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.btnSua.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.btnSua.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.btnSua.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSua.StatePressed.Back.Color1 = System.Drawing.Color.White;
-            this.btnSua.StatePressed.Back.Color2 = System.Drawing.Color.White;
-            this.btnSua.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.ExpertTracking;
-            this.btnSua.StatePressed.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnSua.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(101)))));
-            this.btnSua.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(101)))));
-            this.btnSua.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSua.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnSua.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.btnSua.StateTracking.Back.Color1 = System.Drawing.Color.White;
-            this.btnSua.StateTracking.Back.Color2 = System.Drawing.Color.White;
-            this.btnSua.StateTracking.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.ExpertTracking;
-            this.btnSua.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(101)))));
-            this.btnSua.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(101)))));
-            this.btnSua.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSua.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnSua.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.btnSua.TabIndex = 26;
-            this.btnSua.Values.Text = "";
+            this.lblChiTietHocLieu.BackColor = System.Drawing.Color.White;
+            this.lblChiTietHocLieu.Location = new System.Drawing.Point(99, 50);
+            this.lblChiTietHocLieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblChiTietHocLieu.Name = "lblChiTietHocLieu";
+            this.lblChiTietHocLieu.Size = new System.Drawing.Size(132, 24);
+            this.lblChiTietHocLieu.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.lblChiTietHocLieu.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblChiTietHocLieu.TabIndex = 25;
+            this.lblChiTietHocLieu.Values.Text = "Chi tiết học liệu";
             // 
             // btnXoa
             // 
             this.btnXoa.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Location = new System.Drawing.Point(591, 30);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnXoa.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -183,7 +126,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnXoa.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnXoa.Size = new System.Drawing.Size(40, 40);
+            this.btnXoa.Size = new System.Drawing.Size(40, 39);
             this.btnXoa.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnXoa.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnXoa.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.StateCommon.Back.Image")));
@@ -229,19 +172,20 @@
             this.btnXoa.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnXoa.TabIndex = 27;
             this.btnXoa.Values.Text = "";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // ButtonHocLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.lblChiTietBKT);
-            this.Controls.Add(this.lblTieuDeBKT);
+            this.Controls.Add(this.lblChiTietHocLieu);
+            this.Controls.Add(this.lblTieuDeHocLieu);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnHocLieu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ButtonHocLieu";
-            this.Size = new System.Drawing.Size(650, 100);
+            this.Size = new System.Drawing.Size(651, 100);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,9 +196,10 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnHocLieu;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTieuDeBKT;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblChiTietBKT;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSua;
+        private System.Windows.Forms.Label lblTieuDeHocLieu;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblChiTietHocLieu;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnXoa;
+
+        public Label LblTieuDeHocLieu { get => lblTieuDeHocLieu; set => lblTieuDeHocLieu = value; }
     }
 }

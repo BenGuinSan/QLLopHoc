@@ -16,5 +16,11 @@ namespace QLLopHoc.GUI.Todo
         {
             InitializeComponent();
         }
+        public TaskEmpty(string title, string body)
+        {
+            InitializeComponent();
+            this.lblTitle.Text = title;
+            this.body.Text = body;
+        }
     }
 }

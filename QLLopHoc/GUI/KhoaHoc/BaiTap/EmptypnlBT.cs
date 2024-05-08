@@ -16,5 +16,10 @@ namespace QLLopHoc.GUI.KhoaHoc.BaiTap
         {
             InitializeComponent();
         }
+        public EmptypnlBT(string title)
+        {
+            InitializeComponent();
+            this.title.Text = title;
+        }
     }
 }

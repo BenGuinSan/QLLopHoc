@@ -1,4 +1,7 @@
-﻿namespace QLLopHoc.GUI.Home
+﻿using ComponentFactory.Krypton.Toolkit;
+using System.Windows.Forms;
+
+namespace QLLopHoc.GUI.Home
 {
     partial class ButtonClass
     {
@@ -148,5 +151,10 @@
         private System.Windows.Forms.Label lblTenLop;
         private System.Windows.Forms.Label lblChiTiet;
         private System.Windows.Forms.Label lbl_time_latest;
+
+        public KryptonButton BtnLopHoc { get => btnLopHoc; set => btnLopHoc = value; }
+        public Label LblTenLop { get => lblTenLop; set => lblTenLop = value; }
+        public Label LblChiTiet { get => lblChiTiet; set => lblChiTiet = value; }
+        public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
     }
 }

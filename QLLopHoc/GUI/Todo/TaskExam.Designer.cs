@@ -46,7 +46,7 @@
             // 
             this.kryptonButton3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonButton3.Location = new System.Drawing.Point(0, 0);
-            this.kryptonButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonButton3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(507, 65);
             this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -83,7 +83,7 @@
             // btnDoExam
             // 
             this.btnDoExam.Location = new System.Drawing.Point(394, 16);
-            this.btnDoExam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDoExam.Margin = new System.Windows.Forms.Padding(2);
             this.btnDoExam.Name = "btnDoExam";
             this.btnDoExam.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(28)))), ((int)(((byte)(212)))));
             this.btnDoExam.OverrideDefault.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -98,6 +98,7 @@
             this.btnDoExam.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoExam.TabIndex = 20;
             this.btnDoExam.Values.Text = "";
+            this.btnDoExam.Click += new System.EventHandler(this.btnDoExam_Click);
             // 
             // pictureBoxDiscuss
             // 
@@ -106,7 +107,7 @@
             this.pictureBoxDiscuss.Image = global::QLLopHoc.Properties.Resources.exam;
             this.pictureBoxDiscuss.InitialImage = null;
             this.pictureBoxDiscuss.Location = new System.Drawing.Point(16, 16);
-            this.pictureBoxDiscuss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxDiscuss.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxDiscuss.Name = "pictureBoxDiscuss";
             this.pictureBoxDiscuss.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxDiscuss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,7 +202,7 @@
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TaskExam";
             this.Size = new System.Drawing.Size(507, 65);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiscuss)).EndInit();

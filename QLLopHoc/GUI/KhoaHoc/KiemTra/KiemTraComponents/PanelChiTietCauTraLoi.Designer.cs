@@ -1,4 +1,7 @@
-﻿namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
+﻿using ComponentFactory.Krypton.Toolkit;
+using System.Windows.Forms;
+
+namespace QLLopHoc.GUI.KhoaHoc.KiemTra.KiemTraComponents
 {
     partial class PanelChiTietCauTraLoi
     {
@@ -74,5 +77,9 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox rtbCauTraLoi;
         private System.Windows.Forms.CheckBox chkLaDapAn;
+
+
+        public KryptonRichTextBox RtbCauTraLoi { get => rtbCauTraLoi; set => rtbCauTraLoi = value; }
+        public CheckBox ChkLaDapAn { get => chkLaDapAn; set => chkLaDapAn = value; }
     }
 }
