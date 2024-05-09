@@ -884,5 +884,23 @@
   <ItemGroup>
     <None Include="image\imglop1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icons8-group-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icons8-verified-user-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icons8-denied-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-verified-badge-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-class-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-denied-80%281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

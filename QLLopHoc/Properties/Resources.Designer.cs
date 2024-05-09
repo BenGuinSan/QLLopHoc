@@ -193,6 +193,36 @@ namespace QLLopHoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_class_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_class_80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_denied_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_denied_80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_denied_80_1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8_denied_80_1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_exam_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-exam-30", resourceCulture);
@@ -223,6 +253,16 @@ namespace QLLopHoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_group_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_group_80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_homework_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-homework-100", resourceCulture);
@@ -239,19 +279,17 @@ namespace QLLopHoc.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_powerpoint_40
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap icons8_powerpoint_40 {
+            get {
                 object obj = ResourceManager.GetObject("icons8-powerpoint-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -268,6 +306,26 @@ namespace QLLopHoc.Properties {
         internal static System.Drawing.Bitmap icons8_txt_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-txt-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_verified_badge_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_verified_badge_80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_verified_user_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_verified_user_80", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
